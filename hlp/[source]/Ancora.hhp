@@ -1,0 +1,38 @@
+[OPTIONS]
+Compatibility=1.1 or later
+Compiled file=ancora.chm
+Contents file=Table of Contents.hhc
+Default topic=Presenta.htm
+Display compile progress=No
+Language=0xc0a Español (alfabetización internacional)
+
+
+[FILES]
+VentanaHorarios.htm
+AnalisisHorarios.htm
+AnalisisRecursos.htm
+AnalisisRestricciones.htm
+Asignaciones.htm
+Bienvenido.htm
+Conceptos.htm
+CrearArchivo.htm
+Creditos.htm
+DefinicionSistema.htm
+Duplicar.htm
+EntradaDatos.htm
+Estadisticas.htm
+Generar.htm
+HorariosGenerados.htm
+IdDescrip.htm
+Imposibles.htm
+ImprimirTXT.htm
+Instrucciones.htm
+Modelos.htm
+Opinion.htm
+Presenta.htm
+Redistribuir.htm
+Soporte.htm
+VentanaHorarios.htm
+
+[INFOTYPES]
+

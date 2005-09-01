@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Áncora GOH 1.0.1</title>
+  <style>
+    body {font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 1.5rem;}
+    img {max-width: 100%; height: auto;}
+    table {border-collapse: collapse;}
+  </style>
+</head>
+<body>
+<div style="z-index: 2">
+<p> </p>
+<table border="1" bordercolor="#111111" cellpadding="0" cellspacing="0" id="AutoNumber2" style="border-collapse: collapse; border-width: 0" width="100%">
+<tr>
+<td style="border-style: none; border-width: medium; background-color: #C0C0C0" width="100%">
+<p style="text-align: center"><span style="font-family: Verdana; color: #000080; font-size: 1.5rem">Generar horarios</span></p></td>
+</tr>
+</table>
+<p><span style="font-family: Verdana"> </span></p>
+<p><span style="font-family: Verdana; font-size: 0.875rem">Terminada la entrada de datos, se puede pasar a generar 
+horarios. El sistema solo genera un horario de una Especialidad, Año y 
+Período a la vez. </span> </p>
+<ol>
+<li>
+<p>
+<span style="font-family: Verdana; font-size: 0.875rem">
+<strong> </strong>Seleccione la opción Generar en el menú Horarios o 
+	presione la tecla F6</span></p></li>
+</ol>
+<p> </p>
+</div>
+<p style="text-align: justify"><span style="font-family: Verdana; font-size: 0.875rem"><img border="0" src="Genera2.gif"/></span></p>
+<p style="text-align: justify"> </p>
+<p style="text-align: justify"><span style="font-family: Verdana; font-size: 0.875rem">Aparecerá la <strong>ventana de 
+generación:</strong></span></p>
+<p style="text-align: justify"><span style="font-family: Verdana; font-size: 0.875rem"><img border="0" src="Genera1.jpg"/></span></p>
+<p style="text-align: justify"> </p>
+<p style="text-align: justify"> </p>
+<p style="text-align: justify">
+<span style="font-family: Verdana; font-size: 0.875rem">Cuando se generan un horario 
+	no importa si se ha generado antes. El sistema solo se encargará de colocar 
+	las actividades que no han sido colocadas. </span> </p>
+<p style="text-align: justify"> </p>
+<p style="text-align: justify"><span style="font-family: Verdana; font-size: 1.5rem">Estrategia 
+para generar horarios:</span></p>
+<p style="text-align: justify"> </p>
+<p style="text-align: justify">
+<span style="font-family: Verdana">
+<img border="0" src="Genera3.gif"/></span></p>
+<p style="text-align: justify"> </p>
+<p style="text-align: justify"><span style="font-family: Verdana; font-size: 0.875rem">    La 
+estrategia para generar un horario es la herramienta fundamental del sistema 
+para lograr un horario óptimo. En dependencia de las situaciones que se 
+presentan en la vida práctica, es necesario cambiar esta estrategia para adaptar 
+el generador a la nueva realidad.</span></p>
+<p style="text-align: justify"> </p>
+<p style="text-align: justify"><span style="font-family: Verdana; font-size: 0.875rem">Las posibilidades de 
+estrategias de la presente versión del sistema son:</span></p>
+<p style="text-align: justify"> </p>
+<p style="text-align: justify"><span style="font-family: Verdana; font-size: 0.875rem"><strong>Compactar al inicio del 
+período:</strong> El generador se encargará de colocar lo más cercano al primer día 
+del período, en dependencia del la <strong>potencia</strong> que usted haya establecido.</span></p>
+<p style="text-align: justify"> </p>
+<p style="text-align: justify"><span style="font-family: Verdana; font-size: 0.875rem"><strong>Priorizar el orden de las 
+clasificaciones de actividades</strong>: El sistema le dará mayor prioridad a colocar 
+las actividades según las clasificaciones de actividades. Si usted posee, por 
+ejemplo, dos clasificaciones Conferencia y Clase práctica, el sistema se 
+encargará de colocar primero todas las Conferencias y luego todas las Clases 
+prácticas.</span></p>
+<p style="text-align: justify"> </p>
+<p style="text-align: justify"><span style="font-family: Verdana; font-size: 0.875rem"><strong>Priorizar la cantidad de 
+actividades de las asignaturas</strong>: El sistema le dará mayor prioridad a la 
+asignatura que posea mayor cantidad de actividades según su desglose en el 
+período.</span></p>
+<p style="text-align: justify"> </p>
+<p style="text-align: justify"><span style="font-family: Verdana; font-size: 0.875rem"><strong>Maximizar la agrupación de 
+actividad según su clasificación: </strong>El generador intentará colocar una 
+actividad en un día donde haya actividades de su misma clasificación. Si no 
+selecciona esta casilla las actividades tendrán una mejor posibilidad de 
+combinarse.</span></p>
+<p style="text-align: justify"> </p>
+<p style="text-align: justify"><span style="font-family: Verdana; font-size: 0.875rem">Ejemplo:</span></p>
+<p style="text-align: justify"> </p>
+<p style="text-align: justify"><span style="font-family: Verdana; font-size: 0.875rem">Supongamos que tengamos dos 
+clasificaciones de actividad:</span></p>
+<ul>
+<li>
+<p style="text-align: justify">
+<span style="font-family: Verdana; font-size: 0.875rem">Conf - Conferencia</span></p></li>
+<li>
+<p style="text-align: justify">
+<span style="font-family: Verdana; font-size: 0.875rem">Cp - Clase práctica</span></p>
+</li>
+</ul>
+<p style="text-align: justify"> </p>
+<p style="text-align: justify"><span style="font-family: Verdana; font-size: 0.875rem">Y que las zonas priorizadas 
+sean 4, 5 y 6 turno (sesión de la tarde).</span></p>
+<p style="text-align: justify"> </p>
+<p style="text-align: justify"><span style="font-family: Verdana; font-size: 0.875rem">Cuando <strong>seleccione</strong> esta 
+opción el horario quedaría así:</span></p>
+<p style="text-align: justify"> </p>
+<table border="1" id="table1" width="27%">
+<tr>
+<td style="background-color: #FFFF00" width="41"><span style="font-family: Verdana; font-size: 0.875rem">T</span></td>
+<td style="background-color: #FFFF00" width="41"><span style="font-family: Verdana; font-size: 0.875rem">L</span></td>
+<td style="background-color: #FFFF00" width="37"><span style="font-family: Verdana; font-size: 0.875rem">M</span></td>
+<td style="background-color: #FFFF00"><span style="font-family: Verdana; font-size: 0.875rem">M</span></td>
+<td style="background-color: #FFFF00" width="37"><span style="font-family: Verdana; font-size: 0.875rem">J</span></td>
+<td style="background-color: #FFFF00" width="27"><span style="font-family: Verdana; font-size: 0.875rem">V</span></td>
+</tr>
+<tr>
+<td style="background-color: #FFFF66" width="41"><span style="font-family: Verdana; font-size: 0.875rem">1</span></td>
+<td width="41"> </td>
+<td width="37"> </td>
+<td> </td>
+<td width="37"> </td>
+<td style="background-color: #66FFFF" width="27">
+<span style="font-family: Verdana; font-size: 0.875rem">
+<span style="font-weight: 700; background-color: #66FFFF">Cp</span></span></td>
+</tr>
+<tr>
+<td style="background-color: #FFFF66" width="41"><span style="font-family: Verdana; font-size: 0.875rem">2</span></td>
+<td width="41"> </td>
+<td width="37"> </td>
+<td> </td>
+<td width="37"> </td>
+<td width="27"> </td>
+</tr>
+<tr>
+<td style="background-color: #FFFF66" width="41"><span style="font-family: Verdana; font-size: 0.875rem">3</span></td>
+<td width="41"> </td>
+<td width="37"> </td>
+<td> </td>
+<td width="37"> </td>
+<td width="27"> </td>
+</tr>
+<tr>
+<td style="background-color: #FFFF66" width="41"><span style="font-family: Verdana; font-size: 0.875rem">4</span></td>
+<td style="background-color: #0066FF" width="41"><span style="font-family: Verdana; font-size: 0.875rem"><strong>Conf</strong></span></td>
+<td style="background-color: #0066FF" width="37"><span style="font-family: Verdana; font-size: 0.875rem"><strong>Conf</strong></span></td>
+<td style="background-color: #0066FF"><span style="font-family: Verdana; font-size: 0.875rem"><strong>Conf</strong></span></td>
+<td style="background-color: #66FFFF" width="37"><span style="font-family: Verdana; font-size: 0.875rem"><strong>Cp</strong></span></td>
+<td style="background-color: #66FFFF" width="27"><span style="font-family: Verdana; font-size: 0.875rem"><strong>Cp</strong></span></td>
+</tr>
+<tr>
+<td style="background-color: #FFFF66" width="41"><span style="font-family: Verdana; font-size: 0.875rem">5</span></td>
+<td style="background-color: #0066FF" width="41"><span style="font-family: Verdana; font-size: 0.875rem"><strong>Conf</strong></span></td>
+<td style="background-color: #0066FF" width="37"><span style="font-family: Verdana; font-size: 0.875rem"><strong>Conf</strong></span></td>
+<td style="background-color: #0066FF"><span style="font-family: Verdana; font-size: 0.875rem"><strong>Conf</strong></span></td>
+<td style="background-color: #66FFFF" width="37"><span style="font-family: Verdana; font-size: 0.875rem"><strong>Cp</strong></span></td>
+<td style="background-color: #66FFFF" width="27"><span style="font-family: Verdana; font-size: 0.875rem"><strong>Cp</strong></span></td>
+</tr>
+<tr>
+<td style="background-color: #FFFF66" width="41"><span style="font-family: Verdana; font-size: 0.875rem">6</span></td>
+<td style="background-color: #0066FF" width="41"><span style="font-family: Verdana; font-size: 0.875rem"><strong>Conf</strong></span></td>
+<td style="background-color: #0066FF" width="37"><span style="font-family: Verdana; font-size: 0.875rem"><strong>Conf</strong></span></td>
+<td style="background-color: #0066FF"><span style="font-family: Verdana; font-size: 0.875rem"><strong>Conf</strong></span></td>
+<td style="background-color: #66FFFF" width="37"><span style="font-family: Verdana; font-size: 0.875rem"><strong>Cp</strong></span></td>
+<td width="27"> </td>
+</tr>
+</table>
+<p style="text-align: justify"> </p>
+<p style="text-align: justify"><span style="font-family: Verdana; font-size: 0.875rem">Vea que este horario no es 
+demasiado óptimo como queremos, pues existe una actividad fuera de la zona 
+priorizada. </span> </p>
+<p style="text-align: justify"> </p>
+<p style="text-align: justify"><span style="font-family: Verdana; font-size: 0.875rem">Cuando <strong>no seleccione</strong> 
+esta opción el horario quedaría así:</span></p>
+<p style="text-align: justify"> </p>
+<table border="1" id="table2" width="27%">
+<tr>
+<td style="background-color: #FFFF00" width="41"><span style="font-family: Verdana; font-size: 0.875rem">T</span></td>
+<td style="background-color: #FFFF00" width="41"><span style="font-family: Verdana; font-size: 0.875rem">L</span></td>
+<td style="background-color: #FFFF00" width="37"><span style="font-family: Verdana; font-size: 0.875rem">M</span></td>
+<td style="background-color: #FFFF00"><span style="font-family: Verdana; font-size: 0.875rem">M</span></td>
+<td style="background-color: #FFFF00" width="37"><span style="font-family: Verdana; font-size: 0.875rem">J</span></td>
+<td style="background-color: #FFFF00" width="27"><span style="font-family: Verdana; font-size: 0.875rem">V</span></td>
+</tr>
+<tr>
+<td style="background-color: #FFFF66" width="41"><span style="font-family: Verdana; font-size: 0.875rem">1</span></td>
+<td width="41"> </td>
+<td width="37"> </td>
+<td> </td>
+<td width="37"> </td>
+<td width="27"> </td>
+</tr>
+<tr>
+<td style="background-color: #FFFF66" width="41"><span style="font-family: Verdana; font-size: 0.875rem">2</span></td>
+<td width="41"> </td>
+<td width="37"> </td>
+<td> </td>
+<td width="37"> </td>
+<td width="27"> </td>
+</tr>
+<tr>
+<td style="background-color: #FFFF66" width="41"><span style="font-family: Verdana; font-size: 0.875rem">3</span></td>
+<td width="41"> </td>
+<td width="37"> </td>
+<td> </td>
+<td width="37"> </td>
+<td width="27"> </td>
+</tr>
+<tr>
+<td style="background-color: #FFFF66" width="41"><span style="font-family: Verdana; font-size: 0.875rem">4</span></td>
+<td style="background-color: #0066FF" width="41"><span style="font-family: Verdana; font-size: 0.875rem"><strong>Conf</strong></span></td>
+<td style="background-color: #0066FF" width="37"><span style="font-family: Verdana; font-size: 0.875rem"><strong>Conf</strong></span></td>
+<td style="background-color: #0066FF"><span style="font-family: Verdana; font-size: 0.875rem"><strong>Conf</strong></span></td>
+<td style="background-color: #0066FF" width="37"><span style="font-family: Verdana; font-size: 0.875rem"><strong>Conf</strong></span></td>
+<td style="background-color: #66FFFF" width="27"><span style="font-family: Verdana; font-size: 0.875rem"><strong>Cp</strong></span></td>
+</tr>
+<tr>
+<td style="background-color: #FFFF66" width="41"><span style="font-family: Verdana; font-size: 0.875rem">5</span></td>
+<td style="background-color: #0066FF" width="41"><span style="font-family: Verdana; font-size: 0.875rem"><strong>Conf</strong></span></td>
+<td style="background-color: #0066FF" width="37"><span style="font-family: Verdana; font-size: 0.875rem"><strong>Conf</strong></span></td>
+<td style="background-color: #0066FF"><span style="font-family: Verdana; font-size: 0.875rem"><strong>Conf</strong></span></td>
+<td style="background-color: #66FFFF" width="37"><span style="font-family: Verdana; font-size: 0.875rem"><strong>Cp</strong></span></td>
+<td style="background-color: #66FFFF" width="27"><span style="font-family: Verdana; font-size: 0.875rem"><strong>Cp</strong></span></td>
+</tr>
+<tr>
+<td style="background-color: #FFFF66" width="41"><span style="font-family: Verdana; font-size: 0.875rem">6</span></td>
+<td style="background-color: #0066FF" width="41"><span style="font-family: Verdana; font-size: 0.875rem"><strong>Conf</strong></span></td>
+<td style="background-color: #0066FF" width="37"><span style="font-family: Verdana; font-size: 0.875rem"><strong>Conf</strong></span></td>
+<td style="background-color: #66FFFF"><span style="font-family: Verdana; font-size: 0.875rem"><strong>Cp</strong></span></td>
+<td style="background-color: #66FFFF" width="37"><span style="font-family: Verdana; font-size: 0.875rem"><strong>Cp</strong></span></td>
+<td style="background-color: #66FFFF" width="27"><span style="font-family: Verdana; font-size: 0.875rem"><strong>Cp</strong></span></td>
+</tr>
+</table>
+<p style="text-align: justify"> </p>
+<p style="text-align: justify"><span style="font-family: Verdana; font-size: 0.875rem">Vea que ahora se corrió una 
+conferencia para el jueves, pero sin embargo se pudo combinar mejor las clases 
+prácticas y se logró un horario 100% óptimo.</span></p>
+<p style="text-align: justify"> </p>
+<p style="text-align: justify"><span style="font-family: Verdana; font-size: 0.875rem"><strong>Maximizar la combinación de 
+actividades por día</strong>: Cuando se conoce de antemano que las brigadas, 
+profesores o lugares está restringidos, o cuando se posee gran volumen de 
+información, se debe seleccionar esta opción, la cual garantiza una máxima 
+combinación por día. La combinación por día se realiza para que el profesor 
+pueda realizar sus actividades en la menor cantidad de días posibles. Cuando no 
+se cumplas las condiciones anteriores, se recomienda no marcarlo, para 
+aprovechar en tiempo, y que el generador no tendrá que realizar este proceso.</span></p>
+<p style="text-align: justify"> </p>
+<p style="text-align: justify">
+<span style="font-family: Verdana; font-size: 0.875rem"><strong>Seleccionar lugares 
+	según el más utilizado: </strong>Esta opción será muy utilizada cuando en una 
+	planificación no interese la distancia entre lo lugares, y por tanto el 
+	flujo de brigadas al trasladarse por ellos, pues se conoce de antemano que 
+	no se van a mover o se moverán poco. El generador colocará las actividades 
+	en aquel lugar que más se haya utilizado en el día.</span></p>
+<p style="text-align: justify"> </p>
+<p style="text-align: justify"><span style="font-family: Verdana; font-size: 0.875rem"><strong>Seleccionar lugares según el 
+más utilizado: </strong>En este caso si interesa el flujo de las brigadas. El sistema 
+colocará las actividades en los lugares según su cercanía, a partir de la <strong>
+Tabla de distancias entre lugares</strong>. </span> </p>
+<p style="text-align: justify"> </p>
+<p style="text-align: justify"><span style="font-family: Verdana; font-size: 1.5rem">Pausas entre 
+generaciones:</span></p>
+<p style="text-align: justify"> </p>
+<p style="text-align: justify"><span style="font-family: Verdana; font-size: 0.875rem">Cada vez que se realice una 
+pausa entre generaciones, el sistema le preguntará si desea  ver un <strong>
+análisis del horario generado</strong>. A partir de él, puede deshacerlo y cambiar su 
+estrategia para crear un horario más óptimo.</span></p>
+<p style="text-align: justify"> </p>
+<p style="text-align: justify"><span style="font-family: Verdana; font-size: 0.875rem"><strong>Nota</strong>: El sistema no 
+puede realizar esta acción automáticamente, pues se considera que la <strong>última 
+palabra</strong> siempre la tiene el usuario. Quizás sea de interés dejar un horario 
+a un 98% de óptimo para que otro llegue al 100%. Por ahora el sistema garantiza 
+estas situaciones de forma manual.</span></p>
+<p style="text-align: justify"> </p>
+</body>
+</html>

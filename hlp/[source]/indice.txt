@@ -1,0 +1,114 @@
+Presentación
+Bienvenido
+	definicion del sistema
+	soporte tecnico
+	Creditos
+Instrucciones antes de comenzar
+	Que hacer primero
+	como introducir datos
+	como generar horarios
+	como visualizar los horarios
+	como pedir ayuda
+Introducción 
+	
+        conceptos
+		periodos
+			-datos generales
+		actividad y clasificacion de actividad
+			-zonas de prioridad
+			-brigadas
+			-profesores
+			-lugares
+			-grupos por clasif
+				-accesos prohibidos
+				-aulas fijas
+		Especialidad y año
+		recursos
+			-lugares por actividad
+			-profesores por actividad
+		restricciones
+	estructura informativa
+		identificacion
+			-profesores y lugares virtuales
+		descripcion
+			-alias
+			-restricciones por herencia
+			-capacidad de lugares
+			-matricula de brigadas	
+	sobre el trabajo de generacion
+		
+Puesta en práctica
+	Comenzando
+	Entrada de datos	
+		creacion de un archivo de horarios
+		ventana de horarios		
+		Entrada de datos
+			duplicar informacion
+		Analisis de la información
+			Estadísticas
+			Analisis de recursos
+			Análisis de restricciones
+		tratamiento de archivos
+		   Exportación a TXT
+		   Importación de TXT
+	Generar horarios
+		cola de procesos de generación
+		breve explicacion del trabajo del generador
+		estrategias para generar
+		generar sobre horarios hechos
+		resdistribuir actividades
+		analisis de horarios
+		opinion del generador sobre el orden de prioridad de las clasificacinoes
+	Lo que falta por hacer
+		horarios generados
+		asignaciones de actividades
+	        actividades sin asignar
+			- rechazadas
+			- actividades que faltan por generar
+	Horarios en papel
+		confecion de modelos
+		impresion rapida en TXT
+
+Como resolver un problema real		
+	- deseo que los estudiantes terminen un día más temprano
+	- alumnos ayudantes y monitores
+	- dias feriados
+	- actividades sin profe, lugar y/o brigada
+
+	
+como
+ crear un archivo de horarios
+ abrir un archivo de horarios
+ introducir la cantidad de días de los períodos
+ introducir la cantidad de turnos de los períodos
+ crear un periodo
+ crear una especialidad
+ crear una clasificacion de actividad
+ crear una brigada
+ crear una asignatura
+ crear grupos por clasificacion de actividades
+ crear un profesor
+ crear un lugar
+ asignar un profesor a una actividad
+ asignar lugares para una actividad
+ generar horarios
+ redistribuir actividades
+ duplicar todo acerca de un período
+ duplicar profesores por actividad
+ duplicar lugares por actividad
+ establecer el desglose de actividades por períodos
+ establecer zonas de prioridad de las clasificaciones de actividades
+ establecer la matricula de una brigada
+ establecer la capacidad de los lugares
+ restringir un periodo
+ restringir una especialidad
+ restringir una clasificación de actividad
+ restringir una brigada
+ restringir una asignatura
+ restringir un profesor
+ restringir un lugar
+ analizar los recursos
+ analizar las restricciones
+ analizar los horarios
+ 
+ 

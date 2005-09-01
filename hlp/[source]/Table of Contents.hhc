@@ -1,0 +1,157 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<!-- Sitemap 1.0 -->
+</HEAD><BODY>
+<OBJECT type="text/site properties">
+	<param name="ImageType" value="Folder">
+</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Presentaci&oacute;n">
+		<param name="Local" value="Presenta.htm">
+		<param name="ImageNumber" value="34">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Bienvenido">
+		<param name="ImageNumber" value="1">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Definici&oacute;n del sistema">
+			<param name="Local" value="DefinicionSistema.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Soporte T&eacute;cnico">
+			<param name="Local" value="Soporte.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Cr&eacute;ditos">
+			<param name="Local" value="Creditos.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Instrucciones r&aacute;pidas">
+			<param name="Local" value="Instrucciones.htm">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Introducci&oacute;n">
+		<param name="ImageNumber" value="1">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Conceptos">
+			<param name="Local" value="Conceptos.htm">
+			<param name="URL" value="Conceptos.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Estructura informativa">
+			<param name="Local" value="IdDescrip.htm">
+			<param name="ImageNumber" value="12">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Puesta en pr&aacute;ctica">
+		<param name="ImageNumber" value="1">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Comenzando">
+			<param name="ImageNumber" value="2">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Creaci&oacute;n de un archivo de horarios">
+				<param name="Local" value="CrearArchivo.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Entrada de datos">
+				<param name="Local" value="EntradaDatos.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Ventana de horarios">
+				<param name="Local" value="VentanaHorarios.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="An&aacute;lisis de la informaci&oacute;n">
+				<param name="ImageNumber" value="2">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="An&aacute;lisis de recursos">
+					<param name="Local" value="AnalisisRecursos.htm">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="An&aacute;lsis de las restricciones">
+					<param name="Local" value="AnalisisRestricciones.htm">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Estad&iacute;sticas">
+					<param name="Local" value="Estadisticas.htm">
+					</OBJECT>
+			</UL>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Generar horarios">
+			<param name="ImageNumber" value="2">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="C&oacute;mo generar horarios">
+				<param name="ImageNumber" value="4">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Generar horarios">
+					<param name="Local" value="Generar.htm">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Redistribuir actividades">
+					<param name="Local" value="Redistribuir.htm">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="An&aacute;lisis de horarios">
+					<param name="Local" value="AnalisisHorarios.htm">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Opini&oacute;n del generador acerca de las clasificaciones">
+					<param name="Local" value="Opinion.htm">
+					</OBJECT>
+			</UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Lo que falta por hacer">
+				<param name="ImageNumber" value="4">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Horarios generados">
+					<param name="Local" value="HorariosGenerados.htm">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Asignaciones de actividades">
+					<param name="Local" value="Asignaciones.htm">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Actividades sin asignar">
+					<param name="Local" value="Imposibles.htm">
+					</OBJECT>
+			</UL>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Horarios en papel">
+			<param name="ImageNumber" value="2">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Confecci&oacute;n de modelos">
+				<param name="Local" value="Modelos.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Impresi&oacute;n r&aacute;pida en formato TXT">
+				<param name="Local" value="ImprimirTXT.htm">
+				</OBJECT>
+		</UL>
+	</UL>
+</UL>
+</BODY></HTML>

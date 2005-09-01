@@ -1,0 +1,30 @@
+HTM
+
+que es tempus
+soporte tecnico
+
+conceptos basicos
+puesta en pr�ctica del sistema
+
+comprender la filosofia
+trucos del sistema
+
+creacion de un archivo de horarios
+manejo de archivos
+ventana de horarios
+
+cola de procesos de generaci�n
+breve explicacion del trabajo del generador
+estrategias para generar
+analisis de horarios
+
+horarios generados
+asignaciones de actividades
+
+actividades rechazadas
+actividades que faltan por generar
+
+confecion de modelos
+impresion rapida en TXT
+
+opiniones del sistema

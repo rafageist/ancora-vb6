@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Áncora GOH 1.0.1</title>
+  <style>
+    body {font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 1.5rem;}
+    img {max-width: 100%; height: auto;}
+    table {border-collapse: collapse;}
+  </style>
+</head>
+<body>
+<div style="z-index: 2">
+<p> </p>
+<table border="1" bordercolor="#111111" cellpadding="0" cellspacing="0" id="AutoNumber2" style="border-collapse: collapse; border-width: 0" width="100%">
+<tr>
+<td style="border-style: none; border-width: medium; background-color: #C0C0C0" width="100%">
+<p style="text-align: center"><span style="color: #000080; font-size: 1.5rem"><strong>Identificación y 
+	Descripción</strong></span></p></td>
+</tr>
+</table>
+<p> </p>
+<p><strong>
+ </strong></p>
+</div>
+<p><span style="color: #0000FF; font-size: 2rem">Identificación</span></p>
+<p> </p>
+<p><strong>Identificación</strong>: Es un dato imprescindible que se 
+caracteriza por ser único, irrepetible para cualquier lista de datos.  Se recomienda llenar este dato como 
+abreviatura de lo que pongamos en el dato <strong>descripción</strong>.</p>
+<p><span style="color: #0000FF; font-size: 1.125rem">Recursos 
+  y necesitados virtuales</span></p>
+<p>Es posible que existan actividades que no necesita de profesor o lugar para 
+realizarse. No obstante es obligatorio en Tempus otorgarle por lo menos un 
+profesor y un lugar. Es muy sencillo resolver este problema, basta con crear un 
+profesor virtual o un lugar virtual, es decir un profesor o u lugar cuyas 
+restricciones serán ignoradas. Igual ocurre cuando se desea que un profesor 
+realice una actividad sin necesitar de brigada o lugar.</p>
+<p>Para ello basta con ponerle un<span style="color: #0000FF"> guión bajo</span> en la identificación de la Brigada, 
+del Profesor  o del Lugar, o presionar la tecla correspondiente en su 
+ventana:</p>
+<p>Ejemplo: <span style="color: #0000FF">_Brigada1, _Profe1, _Profe2,  _Lugar1, 
+_Lugar2....</span></p>
+<p> </p>
+<p><span style="color: #0000FF; font-size: 2rem">Descripción</span></p>
+<p> </p>
+<p><strong>Descripción</strong>: Es un dato opcional, pero que le puede 
+ser a usted de mucha utilidad. Es la forma de comentar alguno de las 
+informaciones que contienen la Identificación. Puede ser por ejemplo el nombre de 
+un profesor, la característica de un lugar, etc.</p>
+<p> </p>
+<p>En la descripción además podemos establecer un <strong>alias</strong>, 
+la <strong>matricula de una brigada, </strong>la <strong>restricción  por herencia </strong>de un 
+profesor y la <strong>capacidad de un lugar</strong>:</p>
+<p> </p>
+<p><strong>Alias:</strong> Los identificadores no pueden repetirse, por 
+lo que muchas veces se establecen identificadores algo complejos de entender o 
+recordar, algunos inclusive se hacen extensos. Esto ocurre cuando trabajamos con 
+gran cantidad de información.</p>
+<p> </p>
+<p>Por tal motivo existe el alias, una manera de hacer que 
+varios elementos tengan una misma forma de verse. El sistema cuando encuentre un 
+alias lo mostrará en lugar del identificador, si en la descripción no existe el 
+alias, entonces se muestra la identificación. </p>
+<p> </p>
+<p><strong>Matricula de una brigada</strong>: Se utiliza para reflejar 
+el tamaño de una brigada. No necesariamente tiene que ser la cantidad de 
+alumnos, puede ser cualquier número que le indique a usted si una brigada es 
+mayor que otra. La mayor utilidad de la matricula es cuando se agrupan las 
+brigadas en <strong>grupos por clasificación</strong>, de este modo el sistema lo tiene en 
+cuenta para cuando se encuentra un lugar con <strong>capacidad</strong> menor, no colocar 
+al grupo en él.</p>
+<p> </p>
+<p><strong>Capacidad de lugares: </strong>Se utiliza para reflejar 
+cuantas unidades de matrícula caben es un lugar.</p>
+<p> </p>
+<p>Ejemplo:</p>
+<p>Supongamos que tenemos este grupo de brigadas para una 
+Conferencia:</p>
+<p> </p>
+<table border="1" id="table10" width="44%">
+<tr>
+<td style="background-color: #FFFF99" width="116">Brigada</td>
+<td style="background-color: #FFFF99">Descripción</td>
+<td style="background-color: #FFFF99">Matrícula</td>
+</tr>
+<tr>
+<td width="116">A-11</td>
+<td>Autom 11 &lt;1</td>
+<td>1</td>
+</tr>
+<tr>
+<td width="116">A-12</td>
+<td>Autom 12 &lt;1</td>
+<td>1</td>
+</tr>
+<tr>
+<td width="116">A-13</td>
+<td>Autom 13 &lt;1</td>
+<td>1</td>
+</tr>
+</table>
+<p> </p>
+<p>Y además estos lugares:</p>
+<table border="1" id="table11" width="44%">
+<tr>
+<td width="116">Lugar</td>
+<td>Descripción</td>
+<td>Capacidad</td>
+</tr>
+<tr>
+<td width="116">201</td>
+<td>Aula de conferencia &lt;<strong>4</strong></td>
+<td><strong>4</strong></td>
+</tr>
+<tr>
+<td width="116">202</td>
+<td>Aula especializada &lt;<strong>4</strong></td>
+<td><strong>4</strong></td>
+</tr>
+<tr>
+<td width="116">203</td>
+<td>Aula de clase práctica &lt;<strong>1</strong></td>
+<td><strong>1</strong></td>
+</tr>
+</table>
+<p> </p>
+<p>El grupo tendrá una matricula total de 3, por lo que cabe 
+en los lugares 201 y  202, pero no en la 203.</p>
+<p> </p>
+<p> </p>
+<p><strong>Restricción por herencia:</strong> Se utiliza para establecer 
+que un <strong>profesor</strong>  posee las mismas restricciones que una brigada 
+determinada. Esto es muy útil para crear <span style="color: #0000FF">alumnos ayudantes 
+y monitores.</span></p>
+<p> </p>
+<p>Ejemplo:   </p>
+<p> </p>
+<p>              
+<strong> Profesor: </strong></p>
+<p> </p>
+<p>                
+Pepe&gt; Alumno ayudante &lt;<span style="color: #0000FF">A-11</span></p>
+<p> </p>
+<blockquote>
+<p><strong>Restricciones de <span style="color: #0000FF">A-11</span></strong></p>
+</blockquote>
+<table border="1" id="table15" width="30%">
+<tr>
+<td style="background-color: #FFFF99" width="55">Turno</td>
+<td style="background-color: #FFFF99" width="40">L</td>
+<td style="background-color: #FFFF99" width="41">M</td>
+<td style="background-color: #FFFF99" width="40">M</td>
+<td style="background-color: #FFFF99" width="41">J</td>
+<td style="background-color: #FFFF99">V</td>
+</tr>
+<tr>
+<td height="24" style="background-color: #FFFF99" width="55">1</td>
+<td height="24" width="40"> </td>
+<td height="24" width="41"> </td>
+<td height="24" width="40"> </td>
+<td height="24" width="41"> </td>
+<td height="24"> </td>
+</tr>
+<tr>
+<td style="background-color: #FFFF99" width="55">2</td>
+<td width="40"> </td>
+<td width="41"> </td>
+<td width="40"> </td>
+<td width="41"> </td>
+<td> </td>
+</tr>
+<tr>
+<td style="background-color: #FFFF99" width="55">3</td>
+<td width="40"> </td>
+<td width="41"> </td>
+<td width="40"> </td>
+<td width="41"> </td>
+<td> </td>
+</tr>
+<tr>
+<td style="background-color: #FFFF99" width="55">4</td>
+<td width="40"><span style="color: #FF0000">X</span></td>
+<td width="41"> </td>
+<td width="40"> </td>
+<td width="41"> </td>
+<td> </td>
+</tr>
+<tr>
+<td style="background-color: #FFFF99" width="55">5</td>
+<td width="40"><span style="color: #FF0000">X</span></td>
+<td width="41"> </td>
+<td width="40"> </td>
+<td width="41"> </td>
+<td> </td>
+</tr>
+<tr>
+<td style="background-color: #FFFF99" width="55">6</td>
+<td width="40"><span style="color: #FF0000">X</span></td>
+<td width="41"> </td>
+<td width="40"> </td>
+<td width="41"> </td>
+<td> </td>
+</tr>
+</table>
+<blockquote>
+<p><strong>Restricciones de Pepe</strong></p>
+</blockquote>
+<table border="1" id="table16" width="30%">
+<tr>
+<td style="background-color: #FFFF99" width="55">Turno</td>
+<td style="background-color: #FFFF99" width="40">L</td>
+<td style="background-color: #FFFF99" width="41">M</td>
+<td style="background-color: #FFFF99" width="40">M</td>
+<td style="background-color: #FFFF99" width="41">J</td>
+<td style="background-color: #FFFF99">V</td>
+</tr>
+<tr>
+<td height="24" style="background-color: #FFFF99" width="55">1</td>
+<td height="24" width="40"> </td>
+<td height="24" width="41"> </td>
+<td height="24" width="40"> </td>
+<td height="24" width="41"> </td>
+<td height="24"> </td>
+</tr>
+<tr>
+<td style="background-color: #FFFF99" width="55">2</td>
+<td width="40"> </td>
+<td width="41"> </td>
+<td width="40"> </td>
+<td width="41"> </td>
+<td> </td>
+</tr>
+<tr>
+<td style="background-color: #FFFF99" width="55">3</td>
+<td width="40"> </td>
+<td width="41"> </td>
+<td width="40"> </td>
+<td width="41"> </td>
+<td> </td>
+</tr>
+<tr>
+<td style="background-color: #FFFF99" width="55">4</td>
+<td width="40"><span style="color: #FF0000">Xh</span></td>
+<td width="41"> </td>
+<td width="40">X</td>
+<td width="41"> </td>
+<td> </td>
+</tr>
+<tr>
+<td style="background-color: #FFFF99" width="55">5</td>
+<td width="40"><span style="color: #FF0000">Xh</span></td>
+<td width="41"> </td>
+<td width="40">X</td>
+<td width="41"> </td>
+<td> </td>
+</tr>
+<tr>
+<td style="background-color: #FFFF99" width="55">6</td>
+<td width="40"><span style="color: #FF0000">Xh</span></td>
+<td width="41"> </td>
+<td width="40">X</td>
+<td width="41"> </td>
+<td> </td>
+</tr>
+</table>
+<p>En la tabla <span style="color: #FF0000">Xh</span> es <strong>Restricción por herencia
+</strong></p>
+<p> </p>
+<p><span style="color: #0000FF; font-size: 1.5rem">Sintaxis de la descripción</span></p>
+<p> </p>
+<ul>
+<li>
+<p>Para períodos, especialidades, clasificación de 
+actividades, y asignaturas:</p></li>
+</ul>
+<blockquote>
+<p><strong>alias&gt; comentario </strong> </p>
+<p> </p>
+<p>Ejemplos:</p>
+<ul>
+<li>
+<p>Conf&gt;Conferencia</p></li>
+<li>
+<p>Cp&gt;Clase práctica</p></li>
+<li>
+<p>Autom&gt;Automática</p></li>
+<li>
+<p>M2&gt;Matemática 2</p></li>
+</ul>
+</blockquote>
+<ul>
+<li>
+<p>Para las brigadas:</p></li>
+</ul>
+<blockquote>
+<p><strong>alias&gt; comentario &lt;matricula</strong></p>
+<p> </p>
+<p>Ejemplos:</p>
+<ul>
+<li>
+<p>A11&gt; Autom 11&lt; 1</p></li>
+<li>
+<p>A12&gt; Autom 12&lt; 1</p></li>
+<li>
+<p>A13&gt; Autom 13&lt; 1</p></li>
+<li>
+<p>A14&gt; Autom 14&lt; 1</p></li>
+</ul>
+</blockquote>
+<ul>
+<li>
+<p>Para los profesores:</p></li>
+</ul>
+<p> </p>
+<blockquote>
+<p><strong>alias&gt; comentario &lt;identificación de brigada</strong></p>
+<p> </p>
+<p>Ejemplos:</p>
+<p> </p>
+<ul>
+<li>
+<p>Pepe&gt; alumno ayudante &lt;A-11</p></li>
+<li>
+<p>Juan&gt; monitor de M2 &lt;T-11</p></li>
+</ul>
+</blockquote>
+<ul>
+<li>
+<p>Para los lugares:</p></li>
+</ul>
+<blockquote>
+<p><strong>alias&gt; comentario &lt;capacidad</strong></p>
+</blockquote>
+<p>          
+Ejemplos:</p>
+<blockquote>
+<ul>
+<li>
+<p> 201&gt; Aula conferencia &lt;4</p></li>
+<li>
+<p> 202&gt;Aula clase práctica &lt;2</p></li>
+</ul>
+</blockquote>
+<p><span style="color: #0000FF; font-size: 1.5rem">Informaciones que poseen 
+Identificación y Descripción</span></p>
+<p> </p>
+<p>Las informaciones que contienen <span style="color: #000080">
+identificación</span> y <span style="color: #000080">descripción</span> son:</p>
+<ul>
+<li>
+<p>períodos</p></li>
+<li>
+<p>especialidades</p></li>
+<li>
+<p>clasificación de actividades</p></li>
+<li>
+<p>brigadas</p></li>
+<li>
+<p>asignaturas</p></li>
+<li>
+<p>profesores </p></li>
+<li>
+<p>lugares.</p></li>
+</ul>
+<p> </p>
+<p> </p>
+<p><strong>Ejemplos:</strong></p>
+<p> </p>
+<p>Profesores</p>
+<table border="1" id="table12" width="47%">
+<tr>
+<td style="background-color: #FFFF00" width="114">Identificación</td>
+<td style="background-color: #FFFF00">Descripción</td>
+</tr>
+<tr>
+<td width="114"><span style="color: #0000FF">PEF</span></td>
+<td><span style="color: #0000FF">Profesor de Educación Física</span></td>
+</tr>
+<tr>
+<td width="114"><span style="color: #0000FF">PM2</span></td>
+<td><span style="color: #0000FF">Profesor de Matemática II</span></td>
+</tr>
+<tr>
+<td width="114"><span style="color: #0000FF">PM2a</span></td>
+<td><span style="color: #0000FF">Profesor de clase practica de matemática</span></td>
+</tr>
+<tr>
+<td width="114"><span style="color: #0000FF">PI2a</span></td>
+<td><span style="color: #0000FF">Alumno ayudante de Ingles II</span></td>
+</tr>
+</table>
+<p><span style="color: #0000FF"> </span></p>
+<p>Clasificaciones de actividades</p>
+<p> </p>
+<table border="1" id="table13" width="47%">
+<tr>
+<td style="background-color: #FFFF00" width="114">Identificación</td>
+<td style="background-color: #FFFF00">Descripción</td>
+</tr>
+<tr>
+<td width="114"><span style="color: #0000FF">Conf </span></td>
+<td><span style="color: #0000FF">Conferencia</span></td>
+</tr>
+<tr>
+<td width="114"><span style="color: #0000FF">Cp</span></td>
+<td>
+<p><span style="color: #0000FF">Clase práctica</span></p>
+</td>
+</tr>
+</table>
+<p> </p>
+<p>Lugares</p>
+<p> </p>
+<table border="1" id="table14" width="47%">
+<tr>
+<td style="background-color: #FFFF00" width="114">Identificación</td>
+<td style="background-color: #FFFF00">Descripción</td>
+</tr>
+<tr>
+<td width="114"><span style="color: #0000FF">201</span></td>
+<td><span style="color: #0000FF">Aula Especializada</span></td>
+</tr>
+<tr>
+<td width="114"><span style="color: #0000FF">202</span></td>
+<td>
+<p><span style="color: #0000FF">Aula de clase práctica</span></p>
+</td>
+</tr>
+</table>
+</body>
+</html>

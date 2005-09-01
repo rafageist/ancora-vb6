@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Áncora GOH 1.0.1</title>
+  <style>
+    body {font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 1.5rem;}
+    img {max-width: 100%; height: auto;}
+    table {border-collapse: collapse;}
+  </style>
+</head>
+<body>
+<div style="z-index: 2">
+<p> </p>
+<table border="1" bordercolor="#111111" cellpadding="0" cellspacing="0" id="AutoNumber2" style="border-collapse: collapse; border-width: 0" width="100%">
+<tr>
+<td style="border-style: none; border-width: medium; background-color: #C0C0C0" width="100%">
+<p style="text-align: center"><span style="font-family: Verdana; color: #000080; font-size: 1.5rem"><strong>Identificación y 
+	Descripción</strong></span></p></td>
+</tr>
+</table>
+<p><span style="font-family: Verdana"> </span></p>
+<p><span style="font-family: Verdana"><strong>
+ </strong></span></p>
+</div>
+<p><span style="font-family: Verdana; color: #0000FF; font-size: 2rem">Identificación</span></p>
+<p> </p>
+<p><span style="font-family: Verdana; font-size: 0.875rem"><strong>Identificación</strong>: Es un dato imprescindible que se 
+caracteriza por ser único, irrepetible para cualquier lista de datos.  Se recomienda llenar este dato como 
+abreviatura de lo que pongamos en el dato <strong>descripción</strong>.</span></p>
+<p><span style="font-family: Verdana; color: #0000FF; font-size: 0.875rem">Recursos 
+  y necesitados virtuales</span></p>
+<p><span style="font-family: Verdana; font-size: 0.875rem">Es posible que existan actividades que no necesita de profesor o lugar para 
+realizarse. No obstante es obligatorio en Tempus otorgarle por lo menos un 
+profesor y un lugar. Es muy sencillo resolver este problema, basta con crear un 
+profesor virtual o un lugar virtual, es decir un profesor o u lugar cuyas 
+restricciones serán ignoradas. Igual ocurre cuando se desea que un profesor 
+realice una actividad sin necesitar de brigada o lugar.</span></p>
+<p><span style="font-family: Verdana; font-size: 0.875rem">Para ello basta con ponerle un<span style="color: #0000FF"> guión bajo</span> en la identificación de la Brigada, 
+del Profesor  o del Lugar, o presionar la tecla correspondiente en su 
+ventana:</span></p>
+<p><span style="font-family: Verdana; font-size: 0.875rem">Ejemplo: <span style="color: #0000FF">_Brigada1, _Profe1, _Profe2,  _Lugar1, 
+_Lugar2....</span></span></p>
+<p> </p>
+<p><span style="font-family: Verdana; color: #0000FF; font-size: 2rem">Descripción</span></p>
+<p> </p>
+<p><span style="font-family: Verdana; font-size: 0.875rem"><strong>Descripción</strong>: Es un dato opcional, pero que le puede 
+ser a usted de mucha utilidad. Es la forma de comentar alguno de las 
+informaciones que contienen la Identificación. Puede ser por ejemplo el nombre de 
+un profesor, la característica de un lugar, etc.</span></p>
+<p> </p>
+<p><span style="font-family: Verdana; font-size: 0.875rem">En la descripción además podemos establecer un <strong>alias</strong>, 
+la <strong>matricula de una brigada, </strong>la <strong>restricción  por herencia </strong>de un 
+profesor, la <strong>capacidad de un lugar </strong> y <strong>plantillas para los 
+períodos</strong>:</span></p>
+<p> </p>
+<p><span style="font-family: Verdana; font-size: 0.875rem"><strong>Alias:</strong> Los identificadores no pueden repetirse, por 
+lo que muchas veces se establecen identificadores algo complejos de entender o 
+recordar, algunos inclusive se hacen extensos. Esto ocurre cuando trabajamos con 
+gran cantidad de información.</span></p>
+<p> </p>
+<p><span style="font-family: Verdana; font-size: 0.875rem">Por tal motivo existe el alias, una manera de hacer que 
+varios elementos tengan una misma forma de verse. El sistema cuando encuentre un 
+alias lo mostrará en lugar del identificador, si en la descripción no existe el 
+alias, entonces se muestra la identificación. </span> </p>
+<p> </p>
+<p><span style="font-family: Verdana; font-size: 0.875rem"><strong>Matricula de una brigada</strong>: Se utiliza para reflejar 
+el tamaño de una brigada. No necesariamente tiene que ser la cantidad de 
+alumnos, puede ser cualquier número que le indique a usted si una brigada es 
+mayor que otra. La mayor utilidad de la matricula es cuando se agrupan las 
+brigadas en <strong>grupos por clasificación</strong>, de este modo el sistema lo tiene en 
+cuenta para cuando se encuentra un lugar con <strong>capacidad</strong> menor, no colocar 
+al grupo en él.</span></p>
+<p> </p>
+<p><span style="font-family: Verdana; font-size: 0.875rem"><strong>Capacidad de lugares: </strong>Se utiliza para reflejar 
+cuantas unidades de matrícula caben es un lugar.</span></p>
+<p><span style="font-family: Verdana; font-size: 0.875rem">Ejemplo:</span></p>
+<p><span style="font-family: Verdana; font-size: 0.875rem">Supongamos que tenemos este grupo de brigadas para una 
+Conferencia:</span></p>
+<p> </p>
+<table border="1" id="table10" width="44%">
+<tr>
+<td style="background-color: #FFFF99" width="116"><span style="font-family: Verdana; font-size: 0.875rem">Brigada</span></td>
+<td style="background-color: #FFFF99"><span style="font-family: Verdana; font-size: 0.875rem">Descripción</span></td>
+<td style="background-color: #FFFF99"><span style="font-family: Verdana; font-size: 0.875rem">Matrícula</span></td>
+</tr>
+<tr>
+<td width="116"><span style="font-family: Verdana; font-size: 0.875rem">A-11</span></td>
+<td><span style="font-family: Verdana; font-size: 0.875rem">Autom 11 &lt;1</span></td>
+<td><span style="font-family: Verdana; font-size: 0.875rem">1</span></td>
+</tr>
+<tr>
+<td width="116"><span style="font-family: Verdana; font-size: 0.875rem">A-12</span></td>
+<td><span style="font-family: Verdana; font-size: 0.875rem">Autom 12 &lt;1</span></td>
+<td><span style="font-family: Verdana; font-size: 0.875rem">1</span></td>
+</tr>
+<tr>
+<td width="116"><span style="font-family: Verdana; font-size: 0.875rem">A-13</span></td>
+<td><span style="font-family: Verdana; font-size: 0.875rem">Autom 13 &lt;1</span></td>
+<td><span style="font-family: Verdana; font-size: 0.875rem">1</span></td>
+</tr>
+</table>
+<p> </p>
+<p><span style="font-family: Verdana; font-size: 0.875rem">Y además estos lugares:</span></p>
+<table border="1" id="table11" width="44%">
+<tr>
+<td width="116"><span style="font-family: Verdana; font-size: 0.875rem">Lugar</span></td>
+<td><span style="font-family: Verdana; font-size: 0.875rem">Descripción</span></td>
+<td><span style="font-family: Verdana; font-size: 0.875rem">Capacidad</span></td>
+</tr>
+<tr>
+<td width="116"><span style="font-family: Verdana; font-size: 0.875rem">201</span></td>
+<td><span style="font-family: Verdana; font-size: 0.875rem">Aula de conferencia &lt;<strong>4</strong></span></td>
+<td><span style="font-family: Verdana; font-size: 0.875rem"><strong>4</strong></span></td>
+</tr>
+<tr>
+<td width="116"><span style="font-family: Verdana; font-size: 0.875rem">202</span></td>
+<td><span style="font-family: Verdana; font-size: 0.875rem">Aula especializada &lt;<strong>4</strong></span></td>
+<td><span style="font-family: Verdana; font-size: 0.875rem"><strong>4</strong></span></td>
+</tr>
+<tr>
+<td width="116"><span style="font-family: Verdana; font-size: 0.875rem">203</span></td>
+<td><span style="font-family: Verdana; font-size: 0.875rem">Aula de clase práctica &lt;<strong>1</strong></span></td>
+<td><span style="font-family: Verdana; font-size: 0.875rem"><strong>1</strong></span></td>
+</tr>
+</table>
+<p> </p>
+<p><span style="font-family: Verdana; font-size: 0.875rem">El grupo tendrá una matricula total de 3, por lo que cabe 
+en los lugares 201 y  202, pero no en la 203.</span></p>
+<p> </p>
+<p> </p>
+<p><span style="font-family: Verdana; font-size: 0.875rem"><strong>Restricción por herencia:</strong> Se utiliza para establecer 
+que un <strong>profesor</strong>  posee las mismas restricciones que una brigada 
+determinada. Esto es muy útil para crear <span style="color: #0000FF">alumnos ayudantes 
+y monitores.</span></span></p>
+<p> </p>
+<p><span style="font-family: Verdana; font-size: 0.875rem">Ejemplo:   </span> </p>
+<p> </p>
+<p><span style="font-family: Verdana; font-size: 0.875rem">              
+<strong> Profesor: </strong></span></p>
+<p> </p>
+<p><span style="font-family: Verdana; font-size: 0.875rem">                
+Pepe&gt; Alumno ayudante &lt;<span style="color: #0000FF">A-11</span></span></p>
+<p> </p>
+<blockquote>
+<p><span style="font-family: Verdana; font-size: 0.875rem"><strong>Restricciones de <span style="color: #0000FF">A-11</span></strong></span></p>
+</blockquote>
+<table border="1" id="table15" width="30%">
+<tr>
+<td style="background-color: #FFFF99" width="55"><span style="font-family: Verdana; font-size: 0.875rem">Turno</span></td>
+<td style="background-color: #FFFF99" width="40"><span style="font-family: Verdana; font-size: 0.875rem">L</span></td>
+<td style="background-color: #FFFF99" width="41"><span style="font-family: Verdana; font-size: 0.875rem">M</span></td>
+<td style="background-color: #FFFF99" width="40"><span style="font-family: Verdana; font-size: 0.875rem">M</span></td>
+<td style="background-color: #FFFF99" width="41"><span style="font-family: Verdana; font-size: 0.875rem">J</span></td>
+<td style="background-color: #FFFF99"><span style="font-family: Verdana; font-size: 0.875rem">V</span></td>
+</tr>
+<tr>
+<td height="24" style="background-color: #FFFF99" width="55">
+<span style="font-family: Verdana; font-size: 0.875rem">1</span></td>
+<td height="24" width="40"> </td>
+<td height="24" width="41"> </td>
+<td height="24" width="40"> </td>
+<td height="24" width="41"> </td>
+<td height="24"> </td>
+</tr>
+<tr>
+<td style="background-color: #FFFF99" width="55"><span style="font-family: Verdana; font-size: 0.875rem">2</span></td>
+<td width="40"> </td>
+<td width="41"> </td>
+<td width="40"> </td>
+<td width="41"> </td>
+<td> </td>
+</tr>
+<tr>
+<td style="background-color: #FFFF99" width="55"><span style="font-family: Verdana; font-size: 0.875rem">3</span></td>
+<td width="40"> </td>
+<td width="41"> </td>
+<td width="40"> </td>
+<td width="41"> </td>
+<td> </td>
+</tr>
+<tr>
+<td style="background-color: #FFFF99" width="55"><span style="font-family: Verdana; font-size: 0.875rem">4</span></td>
+<td width="40"><span style="font-family: Verdana; color: #FF0000; font-size: 0.875rem">X</span></td>
+<td width="41"> </td>
+<td width="40"> </td>
+<td width="41"> </td>
+<td> </td>
+</tr>
+<tr>
+<td style="background-color: #FFFF99" width="55"><span style="font-family: Verdana; font-size: 0.875rem">5</span></td>
+<td width="40"><span style="font-family: Verdana; color: #FF0000; font-size: 0.875rem">X</span></td>
+<td width="41"> </td>
+<td width="40"> </td>
+<td width="41"> </td>
+<td> </td>
+</tr>
+<tr>
+<td style="background-color: #FFFF99" width="55"><span style="font-family: Verdana; font-size: 0.875rem">6</span></td>
+<td width="40"><span style="font-family: Verdana; color: #FF0000; font-size: 0.875rem">X</span></td>
+<td width="41"> </td>
+<td width="40"> </td>
+<td width="41"> </td>
+<td> </td>
+</tr>
+</table>
+<blockquote>
+<p><span style="font-family: Verdana; font-size: 0.875rem"><strong>Restricciones de Pepe</strong></span></p>
+</blockquote>
+<table border="1" id="table16" width="30%">
+<tr>
+<td style="background-color: #FFFF99" width="55"><span style="font-family: Verdana; font-size: 0.875rem">Turno</span></td>
+<td style="background-color: #FFFF99" width="40"><span style="font-family: Verdana; font-size: 0.875rem">L</span></td>
+<td style="background-color: #FFFF99" width="41"><span style="font-family: Verdana; font-size: 0.875rem">M</span></td>
+<td style="background-color: #FFFF99" width="40"><span style="font-family: Verdana; font-size: 0.875rem">M</span></td>
+<td style="background-color: #FFFF99" width="41"><span style="font-family: Verdana; font-size: 0.875rem">J</span></td>
+<td style="background-color: #FFFF99"><span style="font-family: Verdana; font-size: 0.875rem">V</span></td>
+</tr>
+<tr>
+<td height="24" style="background-color: #FFFF99" width="55">
+<span style="font-family: Verdana; font-size: 0.875rem">1</span></td>
+<td height="24" width="40"> </td>
+<td height="24" width="41"> </td>
+<td height="24" width="40"> </td>
+<td height="24" width="41"> </td>
+<td height="24"> </td>
+</tr>
+<tr>
+<td style="background-color: #FFFF99" width="55"><span style="font-family: Verdana; font-size: 0.875rem">2</span></td>
+<td width="40"> </td>
+<td width="41"> </td>
+<td width="40"> </td>
+<td width="41"> </td>
+<td> </td>
+</tr>
+<tr>
+<td style="background-color: #FFFF99" width="55"><span style="font-family: Verdana; font-size: 0.875rem">3</span></td>
+<td width="40"> </td>
+<td width="41"> </td>
+<td width="40"> </td>
+<td width="41"> </td>
+<td> </td>
+</tr>
+<tr>
+<td style="background-color: #FFFF99" width="55"><span style="font-family: Verdana; font-size: 0.875rem">4</span></td>
+<td width="40"><span style="font-family: Verdana; color: #FF0000; font-size: 0.875rem">Xh</span></td>
+<td width="41"> </td>
+<td width="40"><span style="font-family: Verdana; font-size: 0.875rem">X</span></td>
+<td width="41"> </td>
+<td> </td>
+</tr>
+<tr>
+<td style="background-color: #FFFF99" width="55"><span style="font-family: Verdana; font-size: 0.875rem">5</span></td>
+<td width="40"><span style="font-family: Verdana; color: #FF0000; font-size: 0.875rem">Xh</span></td>
+<td width="41"> </td>
+<td width="40"><span style="font-family: Verdana; font-size: 0.875rem">X</span></td>
+<td width="41"> </td>
+<td> </td>
+</tr>
+<tr>
+<td style="background-color: #FFFF99" width="55"><span style="font-family: Verdana; font-size: 0.875rem">6</span></td>
+<td width="40"><span style="font-family: Verdana; color: #FF0000; font-size: 0.875rem">Xh</span></td>
+<td width="41"> </td>
+<td width="40"><span style="font-family: Verdana; font-size: 0.875rem">X</span></td>
+<td width="41"> </td>
+<td> </td>
+</tr>
+</table>
+<p><span style="font-family: Verdana; font-size: 0.875rem">En la tabla <span style="color: #FF0000">Xh</span> es <strong>Restricción por herencia
+</strong></span></p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p><span style="font-family: Verdana; font-size: 0.875rem"><strong>Plantilla para los 
+períodos:</strong> Cuando un período utiliza como plantilla de otro período, hereda 
+de el todas sus restricciones así como todas aquellas actividades que han sido 
+asignadas (manualmente o generadas) para cada brigada, profesor y lugar. Las 
+plantillas se utilizan para mantener las mismas actividades (típicas en en los 
+horarios) y agregarle  atípicas.</span></p>
+<p> </p>
+<p><span style="font-family: Verdana; font-size: 0.875rem">Ejemplo: Supongamos que 
+poseemos estos dos períodos: uno que sea la semana impar, y otro que sea la 
+semana 1 de nuestro curso escolar que posee como plantilla la Semana Impar.</span></p>
+<p> </p>
+<p><span style="font-family: Verdana; color: #000080; font-size: 0.875rem">(SI) Semana 
+Impar</span></p>
+<table border="1" id="table19" width="30%">
+<tr>
+<td style="background-color: #FFFF99" width="55"><span style="font-family: Verdana; font-size: 0.875rem">Turno</span></td>
+<td style="background-color: #FFFF99" width="40"><span style="font-family: Verdana; font-size: 0.875rem">L</span></td>
+<td style="background-color: #FFFF99" width="41"><span style="font-family: Verdana; font-size: 0.875rem">M</span></td>
+<td style="background-color: #FFFF99" width="40"><span style="font-family: Verdana; font-size: 0.875rem">M</span></td>
+<td style="background-color: #FFFF99" width="41"><span style="font-family: Verdana; font-size: 0.875rem">J</span></td>
+<td style="background-color: #FFFF99"><span style="font-family: Verdana; font-size: 0.875rem">V</span></td>
+</tr>
+<tr>
+<td height="24" style="background-color: #FFFF99" width="55">
+<span style="font-family: Verdana; font-size: 0.875rem">1</span></td>
+<td height="24" width="40"> </td>
+<td height="24" width="41"> </td>
+<td height="24" width="40"> </td>
+<td height="24" width="41"> </td>
+<td height="24"> </td>
+</tr>
+<tr>
+<td style="background-color: #FFFF99" width="55"><span style="font-family: Verdana; font-size: 0.875rem">2</span></td>
+<td width="40"> </td>
+<td width="41"> </td>
+<td width="40"> </td>
+<td width="41"><span style="color: #800000">X</span></td>
+<td> </td>
+</tr>
+<tr>
+<td style="background-color: #FFFF99" width="55"><span style="font-family: Verdana; font-size: 0.875rem">3</span></td>
+<td width="40"> </td>
+<td width="41"> </td>
+<td width="40"> </td>
+<td width="41"> </td>
+<td> </td>
+</tr>
+<tr>
+<td style="background-color: #FFFF99" width="55"><span style="font-family: Verdana; font-size: 0.875rem">4</span></td>
+<td width="40"><span style="font-family: Verdana; font-size: 0.875rem">Mat</span></td>
+<td width="41"><span style="font-size: 0.875rem">EF</span></td>
+<td width="40"><span style="font-family: Verdana; font-size: 0.875rem">Comp</span></td>
+<td width="41"><span style="font-size: 0.875rem">Dib</span></td>
+<td> </td>
+</tr>
+<tr>
+<td style="background-color: #FFFF99" width="55"><span style="font-family: Verdana; font-size: 0.875rem">5</span></td>
+<td width="40"><span style="font-family: Verdana; font-size: 0.875rem">Mat</span></td>
+<td width="41"><span style="font-size: 0.875rem">His</span></td>
+<td width="40"><span style="font-family: Verdana; font-size: 0.875rem">Comp</span></td>
+<td width="41"><span style="font-size: 0.875rem">Dib</span></td>
+<td> </td>
+</tr>
+<tr>
+<td style="background-color: #FFFF99" width="55"><span style="font-family: Verdana; font-size: 0.875rem">6</span></td>
+<td width="40"><span style="font-family: Verdana; font-size: 0.875rem">Fis</span></td>
+<td width="41"><span style="font-size: 0.875rem">His</span></td>
+<td width="40"> </td>
+<td width="41"><span style="font-size: 0.875rem">EtpII</span></td>
+<td> </td>
+</tr>
+</table>
+<p> </p>
+<p>Las actividades de la Semana Impar se reflejan en la Semana 
+1, así como sus restricciones. Solo se añade las actividades correspondientes a 
+la Semana 1</p>
+<p> </p>
+<p><span style="color: #000080">(S1) Semana 1 &lt;SI</span></p>
+<table border="1" id="table20" width="30%">
+<tr>
+<td style="background-color: #FFFF99" width="55"><span style="font-family: Verdana; font-size: 0.875rem">Turno</span></td>
+<td style="background-color: #FFFF99" width="40"><span style="font-family: Verdana; font-size: 0.875rem">L</span></td>
+<td style="background-color: #FFFF99" width="41"><span style="font-family: Verdana; font-size: 0.875rem">M</span></td>
+<td style="background-color: #FFFF99" width="40"><span style="font-family: Verdana; font-size: 0.875rem">M</span></td>
+<td style="background-color: #FFFF99" width="41"><span style="font-family: Verdana; font-size: 0.875rem">J</span></td>
+<td style="background-color: #FFFF99"><span style="font-family: Verdana; font-size: 0.875rem">V</span></td>
+</tr>
+<tr>
+<td height="24" style="background-color: #FFFF99" width="55">
+<span style="font-family: Verdana; font-size: 0.875rem">1</span></td>
+<td height="24" width="40"> </td>
+<td height="24" width="41"> </td>
+<td height="24" width="40"> </td>
+<td height="24" width="41"> </td>
+<td height="24"> </td>
+</tr>
+<tr>
+<td style="background-color: #FFFF99" width="55"><span style="font-family: Verdana; font-size: 0.875rem">2</span></td>
+<td width="40"> </td>
+<td width="41"> </td>
+<td width="40"> </td>
+<td width="41"><span style="color: #800000">X</span></td>
+<td> </td>
+</tr>
+<tr>
+<td style="background-color: #FFFF99" width="55"><span style="font-family: Verdana; font-size: 0.875rem">3</span></td>
+<td width="40"> </td>
+<td width="41"> </td>
+<td width="40"> </td>
+<td width="41"> </td>
+<td> </td>
+</tr>
+<tr>
+<td style="background-color: #FFFF99" width="55"><span style="font-family: Verdana; font-size: 0.875rem">4</span></td>
+<td width="40"><span style="font-family: Verdana; font-size: 0.875rem">Mat</span></td>
+<td width="41"><span style="font-size: 0.875rem">EF</span></td>
+<td width="40"><span style="font-family: Verdana; font-size: 0.875rem">Comp</span></td>
+<td width="41"><span style="font-size: 0.875rem">Dib</span></td>
+<td style="background-color: #FFFF00"><span style="background-color: #FFFF00">Lab</span></td>
+</tr>
+<tr>
+<td style="background-color: #FFFF99" width="55"><span style="font-family: Verdana; font-size: 0.875rem">5</span></td>
+<td width="40"><span style="font-family: Verdana; font-size: 0.875rem">Mat</span></td>
+<td width="41"><span style="font-size: 0.875rem">His</span></td>
+<td width="40"><span style="font-family: Verdana; font-size: 0.875rem">Comp</span></td>
+<td width="41"><span style="font-size: 0.875rem">Dib</span></td>
+<td style="background-color: #FFFF00">Lab</td>
+</tr>
+<tr>
+<td style="background-color: #FFFF99" width="55"><span style="font-family: Verdana; font-size: 0.875rem">6</span></td>
+<td width="40"><span style="font-family: Verdana; font-size: 0.875rem">Fis</span></td>
+<td width="41"><span style="font-size: 0.875rem">His</span></td>
+<td width="40"> </td>
+<td width="41"><span style="font-size: 0.875rem">EtpII</span></td>
+<td> </td>
+</tr>
+</table>
+<p> </p>
+<p><strong>Cantidad de subgrupos: </strong>Usted puede especificar para una clasificación 
+de actividad, la cantidad de subgrupos que se crearán cuando se imparta la 
+actividad en cuestión. El generador buscará para ese momento tantos lugares y 
+profesores como subgrupos hagan falta.</p>
+<p><span style="font-family: Verdana; color: #0000FF; font-size: 0.875rem">Sintaxis de la descripción</span></p>
+<p> </p>
+<ul>
+<li>
+<p><span style="font-family: Verdana; font-size: 0.875rem">Para períodos</span></p></li>
+</ul>
+<p><span style="font-family: Verdana; font-size: 0.875rem"><strong>            alias&gt; comentario 
+&lt;periodo plantilla</strong></span></p>
+<p> </p>
+<p> </p>
+<p><span style="font-family: Verdana; font-size: 0.875rem">    Ejemplos:</span></p>
+<blockquote>
+<ul>
+<li>
+<p><span style="font-family: Verdana; font-size: 0.875rem">S1&gt;Semana 1&lt;SI</span></p>
+</li>
+<li>
+<p><span style="font-family: Verdana; font-size: 0.875rem">S2&gt;Semana 2&lt;SP</span></p>
+</li>
+<li>
+<p><span style="font-family: Verdana; font-size: 0.875rem">S3&gt;Semana 3&lt;SI</span></p>
+</li>
+</ul>
+</blockquote>
+<ul>
+<li>
+<p><span style="font-family: Verdana; font-size: 0.875rem">Para especialidades, 
+	clasificación de 
+actividades, y asignaturas:</span></p></li>
+</ul>
+<blockquote>
+<p><span style="font-family: Verdana; font-size: 0.875rem"><strong>alias&gt; comentario </strong>
+</span> </p>
+<p> </p>
+<p><span style="font-family: Verdana; font-size: 0.875rem">Ejemplos:</span></p>
+<ul>
+<li>
+<p><span style="font-family: Verdana; font-size: 0.875rem">Conf&gt;Conferencia</span></p></li>
+<li>
+<p><span style="font-family: Verdana; font-size: 0.875rem">Cp&gt;Clase práctica</span></p></li>
+<li>
+<p><span style="font-family: Verdana; font-size: 0.875rem">Autom&gt;Automática</span></p></li>
+<li>
+<p><span style="font-family: Verdana; font-size: 0.875rem">M2&gt;Matemática 2</span></p></li>
+</ul>
+</blockquote>
+<ul>
+<li>
+<p><span style="font-family: Verdana; font-size: 0.875rem">Para las brigadas:</span></p></li>
+</ul>
+<blockquote>
+<p><span style="font-family: Verdana; font-size: 0.875rem"><strong>alias&gt; comentario &lt;matricula</strong></span></p>
+<p> </p>
+<p><span style="font-family: Verdana; font-size: 0.875rem">Ejemplos:</span></p>
+<ul>
+<li>
+<p><span style="font-family: Verdana; font-size: 0.875rem">A11&gt; Autom 11&lt; 1</span></p></li>
+<li>
+<p><span style="font-family: Verdana; font-size: 0.875rem">A12&gt; Autom 12&lt; 1</span></p></li>
+<li>
+<p><span style="font-family: Verdana; font-size: 0.875rem">A13&gt; Autom 13&lt; 1</span></p></li>
+<li>
+<p><span style="font-family: Verdana; font-size: 0.875rem">A14&gt; Autom 14&lt; 1</span></p></li>
+</ul>
+</blockquote>
+<ul>
+<li>
+<p><span style="font-family: Verdana; font-size: 0.875rem">Para los profesores:</span></p></li>
+</ul>
+<p> </p>
+<blockquote>
+<p><span style="font-family: Verdana; font-size: 0.875rem"><strong>alias&gt; comentario &lt;identificación de brigada</strong></span></p>
+<p> </p>
+<p><span style="font-family: Verdana; font-size: 0.875rem">Ejemplos:</span></p>
+<p> </p>
+<ul>
+<li>
+<p><span style="font-family: Verdana; font-size: 0.875rem">Pepe&gt; alumno ayudante &lt;A-11</span></p></li>
+<li>
+<p><span style="font-family: Verdana; font-size: 0.875rem">Juan&gt; monitor de M2 &lt;T-11</span></p></li>
+</ul>
+</blockquote>
+<ul>
+<li>
+<p><span style="font-family: Verdana; font-size: 0.875rem">Para los lugares:</span></p></li>
+</ul>
+<blockquote>
+<p><span style="font-family: Verdana; font-size: 0.875rem"><strong>alias&gt; comentario &lt;capacidad</strong></span></p>
+</blockquote>
+<p><span style="font-family: Verdana; font-size: 0.875rem">          
+Ejemplos:</span></p>
+<blockquote>
+<ul>
+<li>
+<p><span style="font-family: Verdana; font-size: 0.875rem"> 201&gt; Aula conferencia &lt;4</span></p></li>
+<li>
+<p><span style="font-family: Verdana; font-size: 0.875rem"> 202&gt;Aula clase práctica &lt;2</span></p></li>
+</ul>
+</blockquote>
+<p><span style="font-family: Verdana; color: #0000FF; font-size: 1.5rem">Informaciones que poseen 
+Identificación y Descripción</span></p>
+<p> </p>
+<p><span style="font-family: Verdana; font-size: 0.875rem">Las informaciones que contienen <span style="color: #000080">
+identificación</span> y <span style="color: #000080">descripción</span> son:</span></p>
+<ul>
+<li>
+<p><span style="font-family: Verdana; font-size: 0.875rem">períodos</span></p></li>
+<li>
+<p><span style="font-family: Verdana; font-size: 0.875rem">especialidades</span></p></li>
+<li>
+<p><span style="font-family: Verdana; font-size: 0.875rem">clasificación de actividades</span></p></li>
+<li>
+<p><span style="font-family: Verdana; font-size: 0.875rem">brigadas</span></p></li>
+<li>
+<p><span style="font-family: Verdana; font-size: 0.875rem">asignaturas</span></p></li>
+<li>
+<p><span style="font-family: Verdana; font-size: 0.875rem">profesores </span> </p></li>
+<li>
+<p><span style="font-family: Verdana; font-size: 0.875rem">lugares.</span></p></li>
+</ul>
+<p> </p>
+<p> </p>
+<p><span style="font-family: Verdana; font-size: 0.875rem"><strong>Ejemplos:</strong></span></p>
+<p> </p>
+<p><span style="font-family: Verdana; font-size: 0.875rem">Profesores</span></p>
+<table border="1" id="table12" width="47%">
+<tr>
+<td style="background-color: #FFFF00" width="114"><span style="font-family: Verdana; font-size: 0.875rem">Identificación</span></td>
+<td style="background-color: #FFFF00"><span style="font-family: Verdana; font-size: 0.875rem">Descripción</span></td>
+</tr>
+<tr>
+<td width="114"><span style="font-family: Verdana; color: #0000FF; font-size: 0.875rem">PEF</span></td>
+<td><span style="font-family: Verdana; color: #0000FF; font-size: 0.875rem">Profesor de Educación Física</span></td>
+</tr>
+<tr>
+<td width="114"><span style="font-family: Verdana; color: #0000FF; font-size: 0.875rem">PM2</span></td>
+<td><span style="font-family: Verdana; color: #0000FF; font-size: 0.875rem">Profesor de Matemática II</span></td>
+</tr>
+<tr>
+<td width="114"><span style="font-family: Verdana; color: #0000FF; font-size: 0.875rem">PM2a</span></td>
+<td><span style="font-family: Verdana; color: #0000FF; font-size: 0.875rem">Profesor de clase practica de matemática</span></td>
+</tr>
+<tr>
+<td width="114"><span style="font-family: Verdana; color: #0000FF; font-size: 0.875rem">PI2a</span></td>
+<td><span style="font-family: Verdana; color: #0000FF; font-size: 0.875rem">Alumno ayudante de Ingles II</span></td>
+</tr>
+</table>
+<p><span style="font-family: Verdana; color: #0000FF; font-size: 0.875rem"> </span></p>
+<p><span style="font-family: Verdana; font-size: 0.875rem">Clasificaciones de actividades</span></p>
+<p> </p>
+<table border="1" id="table13" width="47%">
+<tr>
+<td style="background-color: #FFFF00" width="114"><span style="font-family: Verdana; font-size: 0.875rem">Identificación</span></td>
+<td style="background-color: #FFFF00"><span style="font-family: Verdana; font-size: 0.875rem">Descripción</span></td>
+</tr>
+<tr>
+<td width="114"><span style="font-family: Verdana; color: #0000FF; font-size: 0.875rem">Conf </span></td>
+<td><span style="font-family: Verdana; color: #0000FF; font-size: 0.875rem">Conferencia</span></td>
+</tr>
+<tr>
+<td width="114"><span style="font-family: Verdana; color: #0000FF; font-size: 0.875rem">Cp</span></td>
+<td>
+<p><span style="font-family: Verdana; color: #0000FF; font-size: 0.875rem">Clase práctica</span></p>
+</td>
+</tr>
+</table>
+<p> </p>
+<p><span style="font-family: Verdana; font-size: 0.875rem">Lugares</span></p>
+<p> </p>
+<table border="1" id="table14" width="47%">
+<tr>
+<td style="background-color: #FFFF00" width="114"><span style="font-family: Verdana; font-size: 0.875rem">Identificación</span></td>
+<td style="background-color: #FFFF00"><span style="font-family: Verdana; font-size: 0.875rem">Descripción</span></td>
+</tr>
+<tr>
+<td width="114"><span style="font-family: Verdana; color: #0000FF; font-size: 0.875rem">201</span></td>
+<td><span style="font-family: Verdana; color: #0000FF; font-size: 0.875rem">Aula Especializada</span></td>
+</tr>
+<tr>
+<td width="114"><span style="font-family: Verdana; color: #0000FF; font-size: 0.875rem">202</span></td>
+<td>
+<p><span style="font-family: Verdana; color: #0000FF; font-size: 0.875rem">Aula de clase práctica</span></p>
+</td>
+</tr>
+</table>
+</body>
+</html>

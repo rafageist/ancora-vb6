@@ -1,0 +1,30 @@
+frm con ayuda
+
+analisis recursos
+archivo
+asignaciones
+lxact
+pxact
+cambioprofelug
+configuracion
+creamodelos
+data
+horarios generados
+desglose
+
+distancias
+
+enterdata
+enterdata2
+
+estadisticas
+generar
+gompi
+
+graficodistancias
+
+grupos
+imposibles
+imprimir
+opinion
+restriccion

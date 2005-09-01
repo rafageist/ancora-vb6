@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Áncora GOH 1.0.1</title>
+  <style>
+    body {font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 1.5rem;}
+    img {max-width: 100%; height: auto;}
+    table {border-collapse: collapse;}
+  </style>
+</head>
+<body>
+<div style="z-index: 2">
+<table border="1" bordercolor="#111111" cellpadding="0" cellspacing="0" id="AutoNumber2" style="border-collapse: collapse; border-width: 0" width="100%">
+<tr>
+<td style="border-style: none; border-width: medium; background-color: #C0C0C0" width="100%">
+<p style="text-align: center"><span style="font-family: Verdana; color: #000080; font-size: 1.5rem"><strong>Conceptos principales</strong></span></p></td>
+</tr>
+</table>
+<p style="text-align: left"><span style="font-family: Verdana; color: #000080; font-size: 0.875rem">Es necesario una comprensión más que 
+	elemental sobre la planificación de horarios para la óptima utilización del 
+	sistema. Por ello comenzaremos explicando algunos conceptos que maneja el 
+	programa y como se estructura y vincula la información que se registra en 
+	él.</span></p><p style="text-align: left">
+<span style="font-family: Verdana; color: #000080; font-size: 1.5rem">Períodos</span></p><p> </p>
+<p><span style="font-family: Verdana; font-size: 0.875rem"><span>La forma en que Áncora estructura los 
+horarios es a través de los <strong>períodos, </strong></span><span> que 
+es el tiempo otorgado a cada uno de ellos<strong>.</strong> Cada período esta compuesto por cierta cantidad de 
+días 
+y turnos por cada día. Dichas magnitudes son fijas para todos los períodos, las 
+cuales  se conocen como <strong>datos generales</strong>. El por qué de no tener 
+magnitudes diferentes para cada período es que generalmente cuando se planifican 
+los horarios para los centros docentes principalmente, se divide todo el tiempo, 
+digamos un trimestre, semestre o un curso, en intervalos de tiempos fijos, ya 
+sean semanas, quincenas, entre otras.</span></span></p>
+<p> </p>
+<p><span style="font-family: Verdana; font-size: 0.875rem">Si se desea crear periodos de magnitudes 
+diferentes:</span></p>
+<p> </p>
+<ol>
+<li>
+<p><span style="font-family: Verdana; font-size: 0.875rem">Se establecen las cantidades de días 
+y turnos a las máximas que el usuario considere:</span></p></li>
+</ol>
+<ul>
+<li>
+<p><span style="font-family: Verdana; font-size: 0.875rem">            la cantidad de 
+	días del 
+periodo más largo</span></p></li>
+<li>
+<p><span style="font-family: Verdana; font-size: 0.875rem">            la cantidad de turnos del 
+	día más largo.</span></p></li>
+</ul>
+<p><span style="font-family: Verdana; font-size: 0.875rem">   
+</span></p>
+<p><span style="font-family: Verdana; font-size: 0.875rem">   <span>
+2.   Se <strong>restringe</strong> aquellos 
+periodos que van a diferir sus magnitudes.</span></span></p>
+<p><span style="font-family: Verdana; font-size: 0.875rem"> </span></p>
+<p><span style="font-family: Verdana; font-size: 0.875rem">Ejemplo:</span></p>
+<p> </p>
+<p><span style="font-family: Verdana; font-size: 0.875rem"> Se desea crear 3 periodos con 
+magnitudes:</span></p>
+<p style="text-indent: -18.0pt; margin-left: 36.0pt">
+<span><span style="font-family: Verdana; font-size: 0.875rem">a)</span><span style="font-style: normal; font-variant: normal; font-weight: normal; font-family: Verdana"><span style="font-size: 0.875rem">     
+</span>
+</span><span style="font-family: Verdana; font-size: 0.875rem">5 días por 6 turnos</span></span></p>
+<p style="text-indent: -18.0pt; margin-left: 36.0pt">
+<span><span style="font-family: Verdana; font-size: 0.875rem">b)</span><span style="font-style: normal; font-variant: normal; font-weight: normal; font-family: Verdana"><span style="font-size: 0.875rem">     
+</span>
+</span><span style="font-family: Verdana; font-size: 0.875rem">7 días por 4 turnos</span></span></p>
+<p style="text-indent: -18.0pt; margin-left: 36.0pt">
+<span><span style="font-family: Verdana; font-size: 0.875rem">c)</span><span style="font-style: normal; font-variant: normal; font-weight: normal; font-family: Verdana"><span style="font-size: 0.875rem">     
+</span>
+</span><span style="font-family: Verdana; font-size: 0.875rem">4 días por 7 turnos</span></span></p>
+<p><span style="font-family: Verdana; font-size: 0.875rem"> </span></p>
+<p><span style="font-family: Verdana; font-size: 0.875rem">Los datos generales serian: 7 días , 7 
+turnos por día</span></p>
+<p><span style="font-family: Verdana; font-size: 0.875rem"> </span></p>
+<p><span style="font-family: Verdana; font-size: 0.875rem">Los períodos quedarían:</span></p>
+<p> </p>
+<p>
+<span style="font-family: Verdana; font-size: 0.875rem">
+<img border="0" height="152" src="Ayuda%202.gif" width="746"/></span></p>
+<p><span style="font-family: Verdana; font-size: 0.875rem"> </span></p>
+<p> </p>
+<p><span style="font-family: Verdana; font-size: 0.875rem">Son ejemplos de períodos:</span></p>
+<ul>
+<li>
+<p><span style="font-family: Verdana; font-size: 0.875rem">    Semana Impar</span></p>
+</li>
+<li>
+<p><span style="font-family: Verdana; font-size: 0.875rem">    Semana Par</span></p>
+</li>
+</ul>
+<p> </p>
+<p style="text-align: left"><span style="font-family: Verdana; color: #000080; font-size: 1.5rem">Actividad y Clasificación de 
+    actividad</span></p><p style="text-align: left"> </p><p>
+<span style="font-family: Verdana; font-size: 0.875rem"><span>Para entender a que se orienta 
+Áncora 
+hay que conocer que es una <strong>actividad:</strong></span></span></p>
+<p><span style="font-family: Verdana; font-size: 0.875rem"><strong> </strong></span></p>
+<p><span style="font-family: Verdana; font-size: 0.875rem"><span>Una <strong>actividad</strong> se va a 
+caracterizar por un intervalo de tiempo determinado en el cual van a intervenir:</span></span></p>
+<p style="text-indent: -18.0pt; margin-left: 54.0pt">
+<span><span style="font-family: Verdana; font-size: 0.875rem">-</span><span style="font-style: normal; font-variant: normal; font-weight: normal; font-family: Verdana"><span style="font-size: 0.875rem">        
+</span>
+</span><span style="font-family: Verdana; font-size: 0.875rem">un grupo de personas denominado <strong>brigadas</strong></span></span></p>
+<p style="text-indent: -18.0pt; margin-left: 54.0pt">
+<span><span style="font-family: Verdana; font-size: 0.875rem">-</span><span style="font-style: normal; font-variant: normal; font-weight: normal; font-family: Verdana"><span style="font-size: 0.875rem">        
+</span>
+</span><span style="font-family: Verdana; font-size: 0.875rem">un dirigente para esa actividad nombrado <strong>profesor</strong></span></span></p>
+<p style="text-indent: -18.0pt; margin-left: 54.0pt">
+<span><span style="font-family: Verdana; font-size: 0.875rem">-</span><span style="font-style: normal; font-variant: normal; font-weight: normal; font-family: Verdana"><span style="font-size: 0.875rem">        
+</span>
+</span><span style="font-family: Verdana; font-size: 0.875rem">un <strong>lugar</strong> donde realizarla</span></span></p>
+<p><span style="font-family: Verdana; font-size: 0.875rem"> </span></p>
+<p><span style="font-family: Verdana; font-size: 0.875rem"><span>Una característica fundamental de un 
+actividad es su <strong>clasificación, </strong> la cual va a determinar:</span></span></p>
+<p style="text-indent: -18.0pt; margin-left: 54.0pt">
+<span><span style="font-family: Verdana; font-size: 0.875rem">-</span><span style="font-style: normal; font-variant: normal; font-weight: normal; font-family: Verdana"><span style="font-size: 0.875rem">        
+</span>
+</span><span style="font-family: Verdana; font-size: 0.875rem">la <strong>cantidad de turnos</strong> necesarios para realizar la actividad</span></span></p>
+<p style="text-indent: -18.0pt; margin-left: 54.0pt">
+<span><span style="font-family: Verdana; font-size: 0.875rem">-</span><span style="font-style: normal; font-variant: normal; font-weight: normal; font-family: Verdana"><span style="font-size: 0.875rem">        
+</span>
+</span><span style="font-family: Verdana; font-size: 0.875rem">el <strong>grupo</strong> para cada brigada respecto a dicha clasificación</span></span></p>
+<p style="text-indent: -18.0pt; margin-left: 54.0pt">
+<span><span style="font-family: Verdana; font-size: 0.875rem">-</span><span style="font-style: normal; font-variant: normal; font-weight: normal; font-family: Verdana"><span style="font-size: 0.875rem">        
+</span>
+</span><span style="font-family: Verdana; font-size: 0.875rem">las zonas <strong>restringidas</strong> para la actividad</span></span></p>
+<p style="text-indent: -18.0pt; margin-left: 54.0pt">
+<span><span style="font-family: Verdana; font-size: 0.875rem">-</span><span style="font-style: normal; font-variant: normal; font-weight: normal; font-family: Verdana"><span style="font-size: 0.875rem">        
+</span>
+</span><span style="font-family: Verdana; font-size: 0.875rem">las <strong>zonas priorizadas</strong> en el horario para la actividad</span></span></p>
+<p><span style="font-family: Verdana; font-size: 0.875rem"> </span></p>
+<p style="text-align: justify"><span style="font-family: Verdana; font-size: 0.875rem"><span>    Las 
+<strong>zonas restringidas o restricciones de las clasificaciones</strong> se convierten en una 
+seguridad para que cualquier actividad de ese tipo no tenga lugar en 
+determinados momentos. </span></span></p>
+<p style="text-align: justify"> </p>
+<p style="text-align: justify"><span style="font-family: Verdana; font-size: 0.875rem">Por ejemplo, existen planificaciones de horarios que por 
+motivos de recursos (aulas, profesores),  dividen los días en sesión mañana 
+y en sesión tarde, y por tal motivo existen actividades que no pueden efectuarse 
+en una sesión contraria a la que se planifica. De esta forma existen horarios en 
+ambas sesiones y se garantiza con ello que algunas brigadas realicen sus 
+actividades en la mañana y otras en la tarde sin que colapsen.</span></p>
+<p style="text-align: justify"> </p>
+<p style="text-align: justify"><span style="font-family: Verdana; font-size: 0.875rem">   Las <strong>zonas de prioridad</strong> 
+son aquellos turnos que se marcan para que el generador intente colocar la 
+actividad en ellos. Así por ejemplo podemos marcar la zona de la sesión de la 
+tarde. <span style="color: #0000FF">Estas zonas son, al igual que las restricciones, 
+independientes para cada período.</span></span></p>
+<p style="text-align: justify"> </p>
+<p style="text-align: justify"><span style="font-family: Verdana; font-size: 0.875rem">Ejemplo: Sesión de la tarde</span></p>
+<p style="text-align: justify"> </p>
+<table border="0" cellpadding="0" cellspacing="0" id="table5" style="border-collapse: collapse; width: 157pt" width="206">
+<colgroup>
+<col style="width: 27pt" width="36"/>
+<col span="5" style="width: 26pt" width="34"/>
+</colgroup>
+<tr height="17" style="height: 12.75pt">
+<td height="17" style="height: 12.75pt; width: 27pt; color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="36">
+<span style="font-family: Verdana"> </span></td>
+<td style="width: 26pt; font-weight: 700; font-family: Arial, sans-serif; text-align: center; color: windowtext; font-size: 10.0pt; font-style: normal; text-decoration: none; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: .5pt solid windowtext; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px; background: yellow" width="34">
+<span style="font-family: Verdana">L</span></td>
+<td style="width: 26pt; font-weight: 700; font-family: Arial, sans-serif; text-align: center; color: windowtext; font-size: 10.0pt; font-style: normal; text-decoration: none; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: .5pt solid windowtext; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px; background: yellow" width="34">
+<span style="font-family: Verdana">M</span></td>
+<td style="width: 26pt; font-weight: 700; font-family: Arial, sans-serif; text-align: center; color: windowtext; font-size: 10.0pt; font-style: normal; text-decoration: none; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: .5pt solid windowtext; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px; background: yellow" width="34">
+<span style="font-family: Verdana">M</span></td>
+<td style="width: 26pt; font-weight: 700; font-family: Arial, sans-serif; text-align: center; color: windowtext; font-size: 10.0pt; font-style: normal; text-decoration: none; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: .5pt solid windowtext; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px; background: yellow" width="34">
+<span style="font-family: Verdana">J</span></td>
+<td style="width: 26pt; font-weight: 700; font-family: Arial, sans-serif; text-align: center; color: windowtext; font-size: 10.0pt; font-style: normal; text-decoration: none; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: .5pt solid windowtext; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px; background: yellow" width="34">
+<span style="font-family: Verdana">V</span></td>
+</tr>
+<tr height="17" style="height: 12.75pt">
+<td height="17" style="height: 12.75pt; font-weight: 700; font-family: Arial, sans-serif; color: windowtext; font-size: 10.0pt; font-style: normal; text-decoration: none; text-align: right; vertical-align: bottom; white-space: nowrap; border-left: .5pt solid windowtext; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px; background: yellow">
+<span style="font-family: Verdana">1</span></td>
+<td style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px">
+		 </td>
+<td style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px">
+		 </td>
+<td style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px">
+		 </td>
+<td style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px">
+		 </td>
+<td style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px">
+		 </td>
+</tr>
+<tr height="17" style="height: 12.75pt">
+<td height="17" style="height: 12.75pt; font-weight: 700; font-family: Arial, sans-serif; color: windowtext; font-size: 10.0pt; font-style: normal; text-decoration: none; text-align: right; vertical-align: bottom; white-space: nowrap; border-left: .5pt solid windowtext; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px; background: yellow">
+<span style="font-family: Verdana">2</span></td>
+<td style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px">
+		 </td>
+<td style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px">
+		 </td>
+<td style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px">
+		 </td>
+<td style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px">
+		 </td>
+<td style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px">
+		 </td>
+</tr>
+<tr height="17" style="height: 12.75pt">
+<td height="17" style="height: 12.75pt; font-weight: 700; font-family: Arial, sans-serif; color: windowtext; font-size: 10.0pt; font-style: normal; text-decoration: none; text-align: right; vertical-align: bottom; white-space: nowrap; border-left: .5pt solid windowtext; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px; background: yellow">
+<span style="font-family: Verdana">3</span></td>
+<td style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px">
+		 </td>
+<td style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px">
+		 </td>
+<td style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px">
+		 </td>
+<td style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px">
+		 </td>
+<td style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px">
+		 </td>
+</tr>
+<tr height="17" style="height: 12.75pt">
+<td height="17" style="height: 12.75pt; font-weight: 700; font-family: Arial, sans-serif; color: windowtext; font-size: 10.0pt; font-style: normal; text-decoration: none; text-align: right; vertical-align: bottom; white-space: nowrap; border-left: .5pt solid windowtext; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px; background: yellow">
+<span style="font-family: Verdana">4</span></td>
+<td style="color: green; text-align: center; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px">
+<span style="font-family: Verdana">v</span></td>
+<td style="color: green; text-align: center; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px">
+<span style="font-family: Verdana">v</span></td>
+<td style="color: green; text-align: center; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px">
+<span style="font-family: Verdana">v</span></td>
+<td style="color: green; text-align: center; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px">
+<span style="font-family: Verdana">v</span></td>
+<td style="color: green; text-align: center; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px">
+<span style="font-family: Verdana">v</span></td>
+</tr>
+<tr height="17" style="height: 12.75pt">
+<td height="17" style="height: 12.75pt; font-weight: 700; font-family: Arial, sans-serif; color: windowtext; font-size: 10.0pt; font-style: normal; text-decoration: none; text-align: right; vertical-align: bottom; white-space: nowrap; border-left: .5pt solid windowtext; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px; background: yellow">
+<span style="font-family: Verdana">5</span></td>
+<td style="color: green; text-align: center; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px">
+<span style="font-family: Verdana">v</span></td>
+<td style="color: green; text-align: center; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px">
+<span style="font-family: Verdana">v</span></td>
+<td style="color: green; text-align: center; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px">
+<span style="font-family: Verdana">v</span></td>
+<td style="color: green; text-align: center; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px">
+<span style="font-family: Verdana">v</span></td>
+<td style="color: green; text-align: center; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px">
+<span style="font-family: Verdana">v</span></td>
+</tr>
+<tr height="17" style="height: 12.75pt">
+<td height="17" style="height: 12.75pt; font-weight: 700; font-family: Arial, sans-serif; color: windowtext; font-size: 10.0pt; font-style: normal; text-decoration: none; text-align: right; vertical-align: bottom; white-space: nowrap; border-left: .5pt solid windowtext; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px; background: yellow">
+<span style="font-family: Verdana">6</span></td>
+<td style="color: green; text-align: center; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px">
+<span style="font-family: Verdana">v</span></td>
+<td style="color: green; text-align: center; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px">
+<span style="font-family: Verdana">v</span></td>
+<td style="color: green; text-align: center; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px">
+<span style="font-family: Verdana">v</span></td>
+<td style="color: green; text-align: center; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px">
+<span style="font-family: Verdana">v</span></td>
+<td style="color: green; text-align: center; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px">
+<span style="font-family: Verdana">v</span></td>
+</tr>
+</table>
+<p style="text-align: justify"> </p>
+<p style="text-align: left"><span style="font-family: Verdana; font-size: 0.875rem">Las zonas de prioridad son muy importantes para el desarrollo de 
+un horario óptimo.  Este dato solo pertenece a la clasificación de actividades. 
+Cuando se elige un turno como zona priorizada, el generador tratará de colocar 
+la actividad correspondiente en dicha zona, si no puede buscará otra solución.</span></p>
+<p style="text-align: left"><span style="font-family: Verdana; font-size: 0.875rem">La utilidad fundamental es distribuir las actividades de forma 
+equitativa a nuestra conveniencia. Por ejemplo, en los centros donde se utilicen 
+dos sesiones (Mañana y Tarde), la zona priorizada nos puede garantizar <strong>
+asignar</strong> las actividades a un grupo de estudiantes por la mañana y a otros 
+por la tarde si es posible. Si no es posible, el sistema colocará en la <strong>zona 
+no priorizada</strong>, y si no 
+nos conviene esta, podremos realizarle un cambio manual.</span></p>
+<p style="text-align: justify"><span style="font-family: Verdana; font-size: 0.875rem">Son ejemplos de 
+clasificaciones de actividades:</span></p>
+<ul>
+<li>
+<p style="text-align: justify"><span style="font-family: Verdana; font-size: 0.875rem">Conferencias</span></p>
+</li>
+<li>
+<p style="text-align: justify"><span style="font-family: Verdana; font-size: 0.875rem">Clases prácticas</span></p>
+</li>
+<li>
+<p style="text-align: justify"><span style="font-family: Verdana; font-size: 0.875rem">Talleres</span></p>
+</li>
+</ul>
+<p> </p>
+<p><span style="font-family: Verdana; font-size: 0.875rem"><span>Estando creadas las clasificaciones y 
+las asignaturas, entonces es posible crear el <strong>desglose de actividades por 
+períodos</strong>. Es en ese momento cuando se crea una actividad. Por ejemplo si 
+tenemos la clasificación Conferencia, y la asignatura Matemática, podremos tener 
+la actividad Conferencia de Matemática. Más adelante se verán los detalles del 
+desglose de actividades.</span></span></p>
+<p> </p>
+<p><span style="font-family: Verdana; color: #0000FF; font-size: 1.5rem">Grupos por 
+clasificación de actividades</span></p>
+<p> </p>
+<p style="text-align: justify"><span style="font-family: Verdana; font-size: 0.875rem"><span>La<strong> clasificación de actividad
+</strong>permite agrupar las brigadas de forma tal que el sistema entiende que todas ellas pueden 
+realizar las actividades de esa clasificación compartiendo un mismo profesor y 
+el mismo lugar. De ahí surgen los <strong>grupos por clasificación de actividades,
+</strong>los cuales son imprescindibles crearlos para generar los horarios.</span></span></p>
+<p> </p>
+<p><span style="font-family: Verdana; font-size: 0.875rem">Por ejemplo: Se pueden crear grupos de 
+Conferencias, de Clases Prácticas, de Talleres, etc.</span></p>
+<p> </p>
+<p><span style="font-family: Verdana; font-size: 0.875rem">La siguiente tabla muestra la forma en 
+que el sistema registra a dichos grupos. Cada columna representa una 
+clasificación de actividades, cada fila una brigada, y la intercepción un grupo.</span></p>
+<p><span style="font-family: Verdana; font-size: 0.875rem">  
+</span></p>
+<table border="0" cellpadding="0" cellspacing="0" id="table2" style="border-collapse: collapse; width: 237pt" width="315">
+<colgroup>
+<col style="width: 47pt" width="63"/><col style="width: 68pt" width="90"/>
+<col style="width: 78pt" width="104"/>
+<col style="width: 44pt" width="58"/>
+</colgroup>
+<tr height="17" style="height: 12.75pt">
+<td height="17" style="height: 12.75pt; width: 47pt; font-weight: 700; font-family: Arial, sans-serif; text-align: center; color: windowtext; font-size: 10.0pt; font-style: normal; text-decoration: none; vertical-align: bottom; white-space: nowrap; border: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px; background: yellow" width="63">
+<span style="font-family: Verdana">Brigadas</span></td>
+<td style="width: 68pt; font-weight: 700; font-family: Arial, sans-serif; text-align: center; color: windowtext; font-size: 10.0pt; font-style: normal; text-decoration: none; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: .5pt solid windowtext; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px; background: yellow" width="90">
+<span style="font-family: Verdana">Conferencias</span></td>
+<td style="width: 78pt; font-weight: 700; font-family: Arial, sans-serif; text-align: center; color: windowtext; font-size: 10.0pt; font-style: normal; text-decoration: none; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: .5pt solid windowtext; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px; background: yellow" width="104">
+<span style="font-family: Verdana">Clase Prácticas</span></td>
+<td style="width: 44pt; font-weight: 700; font-family: Arial, sans-serif; text-align: center; color: windowtext; font-size: 10.0pt; font-style: normal; text-decoration: none; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: .5pt solid windowtext; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px; background: yellow" width="58">
+<span style="font-family: Verdana">Talleres</span></td>
+</tr>
+<tr height="17" style="height: 12.75pt">
+<td height="17" style="height: 12.75pt; text-align: center; color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; vertical-align: bottom; white-space: nowrap; border-left: .5pt solid windowtext; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px; background: #FFFF99">
+<span style="font-family: Verdana">A-11</span></td>
+<td style="text-align: center; color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px">
+<span style="font-family: Verdana">1</span></td>
+<td style="text-align: center; color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px">
+<span style="font-family: Verdana">1</span></td>
+<td style="text-align: center; color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px">
+<span style="font-family: Verdana">1</span></td>
+</tr>
+<tr height="17" style="height: 12.75pt">
+<td height="17" style="height: 12.75pt; text-align: center; color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; vertical-align: bottom; white-space: nowrap; border-left: .5pt solid windowtext; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px; background: #FFFF99">
+<span style="font-family: Verdana">A-12</span></td>
+<td style="text-align: center; color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px">
+<span style="font-family: Verdana">1</span></td>
+<td style="text-align: center; color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px">
+<span style="font-family: Verdana">2</span></td>
+<td style="text-align: center; color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px">
+<span style="font-family: Verdana">1</span></td>
+</tr>
+<tr height="17" style="height: 12.75pt">
+<td height="17" style="height: 12.75pt; text-align: center; color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; vertical-align: bottom; white-space: nowrap; border-left: .5pt solid windowtext; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px; background: #FFFF99">
+<span style="font-family: Verdana">A-13</span></td>
+<td style="text-align: center; color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px">
+<span style="font-family: Verdana">1</span></td>
+<td style="text-align: center; color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px">
+<span style="font-family: Verdana">3</span></td>
+<td style="text-align: center; color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px">
+<span style="font-family: Verdana">2</span></td>
+</tr>
+<tr height="17" style="height: 12.75pt">
+<td height="17" style="height: 12.75pt; text-align: center; color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; vertical-align: bottom; white-space: nowrap; border-left: .5pt solid windowtext; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px; background: #FFFF99">
+<span style="font-family: Verdana">A-14</span></td>
+<td style="text-align: center; color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px">
+<span style="font-family: Verdana">1</span></td>
+<td style="text-align: center; color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px">
+<span style="font-family: Verdana">4</span></td>
+<td style="text-align: center; color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px">
+<span style="font-family: Verdana">2</span></td>
+</tr>
+<tr height="17" style="height: 12.75pt">
+<td height="17" style="height: 12.75pt; text-align: center; color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; vertical-align: bottom; white-space: nowrap; border-left: .5pt solid windowtext; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px; background: #FFFF99">
+<span style="font-family: Verdana">A-15</span></td>
+<td style="text-align: center; color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px">
+<span style="font-family: Verdana">2</span></td>
+<td style="text-align: center; color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px">
+<span style="font-family: Verdana">5</span></td>
+<td style="text-align: center; color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px">
+<span style="font-family: Verdana">3</span></td>
+</tr>
+<tr height="17" style="height: 12.75pt">
+<td height="17" style="height: 12.75pt; text-align: center; color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; vertical-align: bottom; white-space: nowrap; border-left: .5pt solid windowtext; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px; background: #FFFF99">
+<span style="font-family: Verdana">A-16</span></td>
+<td style="text-align: center; color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px">
+<span style="font-family: Verdana">2</span></td>
+<td style="text-align: center; color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px">
+<span style="font-family: Verdana">6</span></td>
+<td style="text-align: center; color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px">
+<span style="font-family: Verdana">3</span></td>
+</tr>
+<tr height="17" style="height: 12.75pt">
+<td height="17" style="height: 12.75pt; text-align: center; color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; vertical-align: bottom; white-space: nowrap; border-left: .5pt solid windowtext; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px; background: #FFFF99">
+<span style="font-family: Verdana">A-17</span></td>
+<td style="text-align: center; color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px">
+<span style="font-family: Verdana">2</span></td>
+<td style="text-align: center; color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px">
+<span style="font-family: Verdana">7</span></td>
+<td style="text-align: center; color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px">
+<span style="font-family: Verdana">3</span></td>
+</tr>
+</table>
+<p> </p>
+<p> </p>
+<p><span style="font-family: Verdana; font-size: 0.875rem">Este ejemplo puede ser visto también de la siguiente forma:</span></p>
+<p> </p>
+<p><span style="font-family: Verdana; font-size: 0.875rem">Grupos de<strong> conferencias</strong></span></p>
+<p> </p>
+<p><span style="font-family: Verdana; font-size: 0.875rem"> <em>grupo 1:</em> A-11, A-12,  A-13, A-14</span></p>
+<p><span style="font-family: Verdana; font-size: 0.875rem"> <em>grupo 2:</em> A-15, A-16, A-17</span></p>
+<p> </p>
+<p><span style="font-family: Verdana; font-size: 0.875rem">Grupos de<strong> clases prácticas</strong></span></p>
+<p> </p>
+<p><span style="font-family: Verdana; font-size: 0.875rem"> <em>grupo 1:</em> A-11</span></p>
+<p><span style="font-family: Verdana; font-size: 0.875rem"> <em>grupo 2:</em> A-12</span></p>
+<p><span style="font-family: Verdana; font-size: 0.875rem"> <em>grupo 3:</em> A-13</span></p>
+<p><span style="font-family: Verdana; font-size: 0.875rem"><em> grupo 4:</em> A-14</span></p>
+<p><span style="font-family: Verdana; font-size: 0.875rem"> <em>grupo 5:</em> A-15</span></p>
+<p><span style="font-family: Verdana; font-size: 0.875rem"><em> grupo 6: </em>A-16</span></p>
+<p><span style="font-family: Verdana; font-size: 0.875rem"> <em>grupo 7:</em> A-17</span></p>
+<p> </p>
+<p><span style="font-family: Verdana; font-size: 0.875rem">Grupos de <strong>talleres</strong></span></p>
+<p> </p>
+<p><span style="font-family: Verdana; font-size: 0.875rem"> <em>grupo 1:</em> A-11, A-12</span></p>
+<p><span style="font-family: Verdana; font-size: 0.875rem"> <em>grupo 2:</em> A-13, A-14</span></p>
+<p><span style="font-family: Verdana; font-size: 0.875rem"> <em>grupo 3:</em> A-15, A-16, A-17</span></p>
+<p>
+<span style="font-family: Verdana; font-size: 0.875rem">
+<strong>Grupos ceros:</strong> El sistema ignorará a las brigadas que tengan por grupo 
+	un cero. Esto es útil cuando no todas la brigadas tengan que dar una 
+	actividad de una clasificación determinada. De esta forma para una misma <strong>
+	especialidad y año, </strong>se pueden tener brigadas que imparten ciertas 
+	actividades, mientras que otras no.</span></p><p>
+<span style="font-family: Verdana; color: #0000FF; font-size: 1.5rem">Especialidad y Año</span></p><p> </p>
+<p><span style="font-family: Verdana; font-size: 0.875rem">¿Que actividades tiene que realizar la 
+brigada?</span></p>
+<p><span style="font-family: Verdana; font-size: 0.875rem"> </span></p>
+<p><span style="font-family: Verdana; font-size: 0.875rem">Para responder esta pregunta se 
+incorporan las categorías <strong>Especialidad</strong><span> 
+y <strong>año </strong>( en algunos centros le 
+llaman curso, grado, entre otros ), 
+propiedades que conectan las <strong>brigadas</strong> con las <strong>asignaturas</strong>. De esta 
+forma cada brigada está obligada a realizar 
+las actividades de cada asignatura que sea de su misma especialidad y año.</span>Cuando 
+se genere un horario, el sistema enlazará aquellas brigadas y asignaturas en 
+pertenezcan a una misma especialidad y el año.</span></p>
+<p><span style="font-family: Verdana; font-size: 0.875rem"> </span></p>
+<p><span style="font-family: Verdana; color: #0000FF; font-size: 1.5rem">Desglose de actividades</span></p>
+<p> </p>
+<p><span style="font-family: Verdana; font-size: 0.875rem"><span>Las actividades de una asignatura se 
+distribuyen en un <strong>desglose de actividades</strong> por <strong>periodo</strong>, 
+independientemente de sus magnitudes.</span></span></p>
+<p> </p>
+<p><span style="font-family: Verdana; font-size: 0.875rem">Ejemplo: 
+</span></p>
+<p><span style="font-family: Verdana; font-size: 0.875rem"> </span></p>
+<p><span style="font-family: Verdana; font-size: 0.875rem"><span><strong>Periodo</strong>: Semana Impar</span></span></p>
+<p><span style="font-family: Verdana; font-size: 0.875rem"><span><strong>Clasificaciones</strong>: (Conf) Conferencia, </span>
+</span></p>
+<p><span style="font-family: Verdana; font-size: 0.875rem">                      
+    (Cp) Clase 
+Practica</span></p>
+<p><span style="font-family: Verdana; font-size: 0.875rem"> </span></p>
+<p><span style="font-family: Verdana; font-size: 0.875rem"><strong>Desglose de actividades</strong></span></p>
+<p> </p>
+<table border="1" id="table10" width="53%">
+<tr>
+<td style="background-color: #FFFF99"><span style="font-family: Verdana">Asignatura</span></td>
+<td style="background-color: #FFFF99">1</td>
+<td style="background-color: #FFFF99">1</td>
+</tr>
+<tr>
+<td>
+<span style="font-size: 10.0pt; font-family: Verdana">Economía 
+    Política</span></td>
+<td>
+<span style="font-size: 10.0pt; font-family: Verdana">Conf</span></td>
+<td>
+<span style="font-size: 10.0pt; font-family: Verdana">Cp</span></td>
+</tr>
+<tr>
+<td>
+<span style="font-size: 10.0pt; font-family: Verdana">Inglés</span></td>
+<td>
+<span style="font-size: 10.0pt; font-family: Verdana">Conf</span></td>
+<td>
+<span style="font-size: 10.0pt; font-family: Verdana">Cp</span></td>
+</tr>
+<tr>
+<td>
+<span style="font-size: 10.0pt; font-family: Verdana">Programación</span></td>
+<td>
+<span style="font-size: 10.0pt; font-family: Verdana">Conf</span></td>
+<td> </td>
+</tr>
+</table>
+<p><span style="font-family: Verdana; font-size: 0.875rem"> </span></p>
+<p><span style="font-family: Verdana; font-size: 0.875rem"><span>Nota: Áncora permite que se <strong>respete</strong> o no 
+el orden de las actividades por cada asignatura de forma independiente.</span></span></p>
+<p><span style="font-family: Verdana; font-size: 0.875rem"> </span></p>
+<p> </p>
+<p><span style="font-family: Verdana; color: #0000FF; font-size: 1.5rem">Asignación de recursos</span></p>
+<p> </p>
+<p><span style="font-family: Verdana; font-size: 0.875rem"><span>Cada una de las 
+actividades establecidas en los desgloses va a poseer un conjunto de recursos (y por lo menos uno)  para que se puedan realizar. 
+Estos son los <strong>profesores</strong> y <strong> </strong>los <strong>lugares.</strong></span></span></p>
+<p> </p>
+<p><span style="font-family: Verdana; font-size: 1.125rem"><span><strong>Profesores por actividad</strong></span></span></p>
+<p> </p>
+<p><span style="font-family: Verdana; font-size: 0.875rem">La siguiente tabla muestra un ejemplo de 
+asignación de recursos para la asignatura Matemática de la Semana Impar. Esta 
+asignatura tiene 2 actividades para este período que son Conferencias . Las 
+brigadas que realizarán estas actividades se dividen en 3 grupos de conferencia:</span></p>
+<p> </p>
+<ul>
+<li>
+<p><span style="font-family: Verdana; font-size: 0.875rem"> <em>grupo 1:</em> A-11, A-12</span></p></li>
+<li>
+<p><span style="font-family: Verdana; font-size: 0.875rem"> <em>grupo 2:</em> A-13, A-14</span></p></li>
+<li>
+<p><span style="font-family: Verdana; font-size: 0.875rem"> <em>grupo 3:</em> A-15, A-16</span></p></li>
+</ul>
+<p> </p>
+<p><span style="font-family: Verdana; font-size: 0.875rem"><span>A su vez la asignatura posee 3 
+profesores como <strong>recursos humanos</strong> disponibles para realizar sus actividades.</span></span></p>
+<p> </p>
+<table border="0" cellpadding="0" cellspacing="0" id="table3" style="border-collapse: collapse; width: 636px">
+<colgroup>
+<col style="width: 56pt" width="75"/><col style="width: 68pt" width="91"/>
+<col style="width: 58pt" width="77"/><col style="width: 66pt" width="88"/>
+<col style="width: 45pt" width="60"/>
+<col style="width: 100pt" width="133"/>
+</colgroup>
+<tr height="17" style="height: 12.75pt">
+<td height="17" style="height: 12.75pt; width: 80px; font-weight: 700; font-family: Arial, sans-serif; color: windowtext; font-size: 10.0pt; font-style: normal; text-decoration: none; text-align: center; vertical-align: bottom; white-space: nowrap; border: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px; background: yellow">
+<span style="font-family: Verdana">Asignatura</span></td>
+<td style="width: 107px; font-weight: 700; font-family: Arial, sans-serif; color: windowtext; font-size: 10.0pt; font-style: normal; text-decoration: none; text-align: center; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: .5pt solid windowtext; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px; background: yellow">
+<span style="font-family: Verdana">Período</span></td>
+<td style="width: 88px; font-weight: 700; font-family: Arial, sans-serif; color: windowtext; font-size: 10.0pt; font-style: normal; text-decoration: none; text-align: center; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: .5pt solid windowtext; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px; background: yellow">
+<span style="font-family: Verdana"># Actividad</span></td>
+<td style="width: 91px; font-weight: 700; font-family: Arial, sans-serif; color: windowtext; font-size: 10.0pt; font-style: normal; text-decoration: none; text-align: center; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: .5pt solid windowtext; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px; background: yellow">
+<span style="font-family: Verdana">Clasificación</span></td>
+<td style="width: 53px; font-weight: 700; font-family: Arial, sans-serif; color: windowtext; font-size: 10.0pt; font-style: normal; text-decoration: none; text-align: center; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: .5pt solid windowtext; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px; background: yellow">
+<span style="font-family: Verdana">Profesor</span></td>
+<td style="width: 192px; font-weight: 700; font-family: Arial, sans-serif; color: windowtext; font-size: 10.0pt; font-style: normal; text-decoration: none; text-align: center; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: .5pt solid windowtext; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px; background: yellow">
+<span style="font-family: Verdana">Grupos que atiende</span></td>
+</tr>
+<tr height="17" style="height: 12.75pt">
+<td height="17" style="height: 12.75pt; color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: center; vertical-align: bottom; white-space: nowrap; border-left: .5pt solid windowtext; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="80">
+<span style="font-family: Verdana">Matemática</span></td>
+<td style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: center; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="107">
+<span style="font-family: Verdana">Semana Impar</span></td>
+<td style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: center; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="88">
+<span style="font-family: Verdana">1</span></td>
+<td style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: center; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="91">
+<span style="font-family: Verdana">Conferencia</span></td>
+<td style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: center; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="53">
+<span style="font-family: Verdana">Pedro</span></td>
+<td style="text-align: center; color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="192">
+<span style="font-family: Verdana">1,2</span></td>
+</tr>
+<tr height="17" style="height: 12.75pt">
+<td height="17" style="height: 12.75pt; color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: center; vertical-align: bottom; white-space: nowrap; border-left: .5pt solid windowtext; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="80">
+<span style="font-family: Verdana">Matemática</span></td>
+<td style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: center; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="107">
+<span style="font-family: Verdana">Semana Impar</span></td>
+<td style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: center; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="88">
+<span style="font-family: Verdana">1</span></td>
+<td style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: center; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="91">
+<span style="font-family: Verdana">Conferencia</span></td>
+<td style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: center; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="53">
+<span style="font-family: Verdana">Juan</span></td>
+<td style="text-align: center; color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="192">
+<span style="font-family: Verdana">3,4</span></td>
+</tr>
+<tr height="17" style="height: 12.75pt">
+<td height="17" style="height: 12.75pt; color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: center; vertical-align: bottom; white-space: nowrap; border-left: .5pt solid windowtext; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="80">
+<span style="font-family: Verdana">Matemática</span></td>
+<td style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: center; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="107">
+<span style="font-family: Verdana">Semana Impar</span></td>
+<td style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: center; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="88">
+<span style="font-family: Verdana">1</span></td>
+<td style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: center; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="91">
+<span style="font-family: Verdana">Conferencia</span></td>
+<td style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: center; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="53">
+<span style="font-family: Verdana">Jose</span></td>
+<td style="text-align: center; color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="192">
+<span style="font-family: Verdana">5,6</span></td>
+</tr>
+<tr height="17" style="height: 12.75pt">
+<td height="17" style="height: 12.75pt; color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: center; vertical-align: bottom; white-space: nowrap; border-left: .5pt solid windowtext; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="80">
+<span style="font-family: Verdana">Matemática</span></td>
+<td style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: center; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="107">
+<span style="font-family: Verdana">Semana Impar</span></td>
+<td style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: center; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="88">
+<span style="font-family: Verdana">2</span></td>
+<td style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: center; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="91">
+<span style="font-family: Verdana">Conferencia</span></td>
+<td style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: center; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="53">
+<span style="font-family: Verdana">Pedro</span></td>
+<td style="text-align: center; color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="192">
+<span style="font-family: Verdana">1,2</span></td>
+</tr>
+<tr height="17" style="height: 12.75pt">
+<td height="17" style="height: 12.75pt; color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: center; vertical-align: bottom; white-space: nowrap; border-left: .5pt solid windowtext; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="80">
+<span style="font-family: Verdana">Matemática</span></td>
+<td style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: center; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="107">
+<span style="font-family: Verdana">Semana Impar</span></td>
+<td style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: center; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="88">
+<span style="font-family: Verdana">2</span></td>
+<td style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: center; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="91">
+<span style="font-family: Verdana">Conferencia</span></td>
+<td style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: center; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="53">
+<span style="font-family: Verdana">Juan</span></td>
+<td style="text-align: center; color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="192">
+<span style="font-family: Verdana">3,4</span></td>
+</tr>
+<tr height="17" style="height: 12.75pt">
+<td height="17" style="height: 12.75pt; color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: center; vertical-align: bottom; white-space: nowrap; border-left: .5pt solid windowtext; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="80">
+<span style="font-family: Verdana">Matemática</span></td>
+<td style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: center; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="107">
+<span style="font-family: Verdana">Semana Impar</span></td>
+<td style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: center; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="88">
+<span style="font-family: Verdana">2</span></td>
+<td style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: center; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="91">
+<span style="font-family: Verdana">Conferencia</span></td>
+<td style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: center; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="53">
+<span style="font-family: Verdana">Jose</span></td>
+<td style="text-align: center; color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="192">
+<span style="font-family: Verdana">5,6</span></td>
+</tr>
+</table>
+<p> </p>
+<p><span style="font-family: Verdana; font-size: 0.875rem"> La forma de leer esta información 
+es la siguiente:</span></p>
+<p><span style="font-family: Verdana; font-size: 0.875rem"> Por ejemplo la primera fila:</span></p>
+<p> </p>
+<p><span style="font-family: Verdana; font-size: 0.875rem"> " La asignatura Matemática en la 
+Semana Impar, para su actividad número 1, la cual es conferencia, tiene al 
+profesor Pedro atendiendo a los grupos 1 y 2. "</span></p>
+<p> </p>
+<p><span style="font-family: Verdana"> </span></p>
+<p><span style="font-family: Verdana; font-size: 1.125rem">Lugares por actividad</span></p>
+<p> </p>
+<p><span style="font-family: Verdana">Similarmente ocurre con los lugares:</span></p>
+<p><span style="font-family: Verdana"> </span></p>
+<table border="0" cellpadding="0" cellspacing="0" id="table4" style="border-collapse: collapse; width: 711px">
+<colgroup>
+<col style="width: 56pt" width="75"/><col style="width: 68pt" width="91"/>
+<col style="width: 58pt" width="77"/><col style="width: 66pt" width="88"/>
+<col style="width: 241pt" width="321"/>
+</colgroup>
+<tr height="17" style="height: 12.75pt">
+<td height="17" style="height: 12.75pt; width: 56pt; font-weight: 700; font-family: Arial, sans-serif; color: windowtext; font-size: 10.0pt; font-style: normal; text-decoration: none; text-align: general; vertical-align: bottom; white-space: nowrap; border: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px; background: yellow" width="75">
+<span style="font-family: Verdana">Asignatura</span></td>
+<td style="width: 144px; font-weight: 700; font-family: Arial, sans-serif; color: windowtext; font-size: 10.0pt; font-style: normal; text-decoration: none; text-align: general; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: .5pt solid windowtext; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px; background: yellow">
+<span style="font-family: Verdana">Período</span></td>
+<td style="width: 106px; font-weight: 700; font-family: Arial, sans-serif; color: windowtext; font-size: 10.0pt; font-style: normal; text-decoration: none; text-align: general; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: .5pt solid windowtext; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px; background: yellow">
+<span style="font-family: Verdana"># Actividad</span></td>
+<td style="width: 175px; font-weight: 700; font-family: Arial, sans-serif; color: windowtext; font-size: 10.0pt; font-style: normal; text-decoration: none; text-align: general; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: .5pt solid windowtext; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px; background: yellow">
+<span style="font-family: Verdana">Clasificación</span></td>
+<td style="width: 191px; font-weight: 700; font-family: Arial, sans-serif; color: windowtext; font-size: 10.0pt; font-style: normal; text-decoration: none; text-align: general; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: .5pt solid windowtext; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px; background: yellow">
+<span style="font-family: Verdana">Lugares</span></td>
+</tr>
+<tr height="17" style="height: 12.75pt">
+<td height="17" style="height: 12.75pt; color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border-left: .5pt solid windowtext; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px">
+<span style="font-family: Verdana">Matemática</span></td>
+<td style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="144">
+<span style="font-family: Verdana">Semana Impar</span></td>
+<td style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: right; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="106">
+<span style="font-family: Verdana">1</span></td>
+<td style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="175">
+<span style="font-family: Verdana">Conferencia</span></td>
+<td style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="191">
+<span style="font-family: Verdana">201,202,203,204</span></td>
+</tr>
+<tr height="17" style="height: 12.75pt">
+<td height="17" style="height: 12.75pt; color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border-left: .5pt solid windowtext; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px">
+<span style="font-family: Verdana">Matemática</span></td>
+<td style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="144">
+<span style="font-family: Verdana">Semana Impar</span></td>
+<td style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: right; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="106">
+<span style="font-family: Verdana">2</span></td>
+<td style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="175">
+<span style="font-family: Verdana">Conferencia</span></td>
+<td style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="191">
+<span style="font-family: Verdana">205,206,207,208</span></td>
+</tr>
+</table>
+<p> </p>
+<p><span style="font-family: Verdana"> " La asignatura Matemática en la 
+Semana Impar, para su actividad número 1, la cual es conferencia, tiene a las 
+aulas 201, 202, 203 y 204 disponibles "</span></p>
+<p><span style="font-family: Verdana"><span style="font-size: 11pt">En el caso de los<strong> lugares por 
+actividad </strong>es necesario establecer una prioridad para cada uno. El objetivo 
+de esto es el garantizar que el generador intente colocar la actividad en las 
+aulas según dichas prioridades. En nuestro ejemplo pudiera ser que las aulas 201 
+y 202 tengan prioridad número 1 y la 203 y 204 la segunda prioridad. Esto ocurre 
+para tratar en algunos casos que la actividad sea colocada en aulas específicas 
+si es posible, por ejemplo aulas especializadas. El valor por defecto de la 
+prioridad de los lugares es 1.</span></span></p>
+<p><span style="font-family: Verdana; color: #0000FF; font-size: 1.5rem">Profesor y lugares de 
+  reserva</span></p>
+<p><span style="font-family: Verdana"><span style="font-size: 11pt">Normalmente las actividades 
+docentes son dirigidas por un profesor en específico. Puede ocurrir que tal 
+profesor vaya a fallar en algun momento o que el generador le haya asignado 
+demasiadas actividades según los recursos que el usuario haya establecido. Igual 
+ocurre con los lugares. </span></span></p>
+<p><span style="font-family: Verdana">Para resolver este problema se hace necesario crear profesores o lugares 
+	de reserva. Simplemente agregue el profesor en la lista de <strong>Profesores por 
+	actividad</strong> a la misma actividad y con los mismos grupos, o el lugar a <strong>
+	Lugares por actividad.</strong></span></p><p> </p><p><span style="font-family: Verdana">Por ejemplo:</span></p><p>
+<span style="font-family: Verdana">Profesor de reserva 
+"Juan"</span></p><table border="0" cellpadding="0" cellspacing="0" id="table8" style="border-collapse: collapse; width: 638px">
+<colgroup>
+<col style="width: 56pt" width="75"/><col style="width: 68pt" width="91"/>
+<col style="width: 58pt" width="77"/><col style="width: 66pt" width="88"/>
+<col style="width: 45pt" width="60"/>
+<col style="width: 100pt" width="133"/>
+</colgroup>
+<tr height="17" style="height: 12.75pt">
+<td height="17" style="height: 12.75pt; width: 80px; font-weight: 700; font-family: Arial, sans-serif; color: windowtext; font-size: 10.0pt; font-style: normal; text-decoration: none; text-align: general; vertical-align: bottom; white-space: nowrap; border: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px; background: yellow">
+<span style="font-family: Verdana">Asignatura</span></td>
+<td style="width: 106px; font-weight: 700; font-family: Arial, sans-serif; color: windowtext; font-size: 10.0pt; font-style: normal; text-decoration: none; text-align: general; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: .5pt solid windowtext; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px; background: yellow">
+<span style="font-family: Verdana">Período</span></td>
+<td style="width: 86px; font-weight: 700; font-family: Arial, sans-serif; color: windowtext; font-size: 10.0pt; font-style: normal; text-decoration: none; text-align: general; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: .5pt solid windowtext; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px; background: yellow">
+<span style="font-family: Verdana"># Actividad</span></td>
+<td style="width: 93px; font-weight: 700; font-family: Arial, sans-serif; color: windowtext; font-size: 10.0pt; font-style: normal; text-decoration: none; text-align: general; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: .5pt solid windowtext; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px; background: yellow">
+<span style="font-family: Verdana">Clasificación</span></td>
+<td style="width: 53px; font-weight: 700; font-family: Arial, sans-serif; color: windowtext; font-size: 10.0pt; font-style: normal; text-decoration: none; text-align: general; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: .5pt solid windowtext; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px; background: yellow">
+<span style="font-family: Verdana">Profesor</span></td>
+<td style="width: 196px; font-weight: 700; font-family: Arial, sans-serif; color: windowtext; font-size: 10.0pt; font-style: normal; text-decoration: none; text-align: general; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: .5pt solid windowtext; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px; background: yellow">
+<span style="font-family: Verdana">Grupos que atiende</span></td>
+</tr>
+<tr height="17" style="height: 12.75pt">
+<td height="17" style="height: 12.75pt; color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border-left: .5pt solid windowtext; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="80">
+<span style="font-family: Verdana">Matemática</span></td>
+<td style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="106">
+<span style="font-family: Verdana">Semana Impar</span></td>
+<td style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: right; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="86">
+<span style="font-family: Verdana">1</span></td>
+<td style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="93">
+<span style="font-family: Verdana">Conferencia</span></td>
+<td style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="53">
+<span style="font-family: Verdana">Pedro</span></td>
+<td style="text-align: left; color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="196">
+<span style="font-family: Verdana">1,2</span></td>
+</tr>
+<tr>
+<td height="17" style="height: 12.75pt; color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border-left: .5pt solid windowtext; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="80">
+<span style="font-family: Verdana; color: #0000FF">Matemática</span></td>
+<td style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="106">
+<span style="font-family: Verdana; color: #0000FF">Semana Impar</span></td>
+<td style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: right; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="86">
+<span style="font-family: Verdana; color: #0000FF">1</span></td>
+<td style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="93">
+<span style="font-family: Verdana; color: #0000FF">Conferencia</span></td>
+<td style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="53">
+<span style="font-family: Verdana; color: #0000FF">Juan</span></td>
+<td style="text-align: left; color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="196">
+<span style="font-family: Verdana; color: #0000FF">1,2</span></td>
+</tr>
+<tr height="17" style="height: 12.75pt">
+<td height="17" style="height: 12.75pt; color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border-left: .5pt solid windowtext; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="80">
+<span style="font-family: Verdana">Matemática</span></td>
+<td style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="106">
+<span style="font-family: Verdana">Semana Impar</span></td>
+<td style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: right; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="86">
+<span style="font-family: Verdana">1</span></td>
+<td style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="93">
+<span style="font-family: Verdana">Conferencia</span></td>
+<td style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="53">
+<span style="font-family: Verdana">Juan</span></td>
+<td style="text-align: left; color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="196">
+<span style="font-family: Verdana">3,4</span></td>
+</tr>
+<tr height="17" style="height: 12.75pt">
+<td height="17" style="height: 12.75pt; color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border-left: .5pt solid windowtext; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="80">
+<span style="font-family: Verdana">Matemática</span></td>
+<td style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="106">
+<span style="font-family: Verdana">Semana Impar</span></td>
+<td style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: right; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="86">
+<span style="font-family: Verdana">1</span></td>
+<td style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="93">
+<span style="font-family: Verdana">Conferencia</span></td>
+<td style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="53">
+<span style="font-family: Verdana">Jose</span></td>
+<td style="text-align: left; color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="196">
+<span style="font-family: Verdana">5,6</span></td>
+</tr>
+<tr height="17" style="height: 12.75pt">
+<td height="17" style="height: 12.75pt; color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border-left: .5pt solid windowtext; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="80">
+<span style="font-family: Verdana">Matemática</span></td>
+<td style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="106">
+<span style="font-family: Verdana">Semana Impar</span></td>
+<td style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: right; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="86">
+<span style="font-family: Verdana">2</span></td>
+<td style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="93">
+<span style="font-family: Verdana">Conferencia</span></td>
+<td style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="53">
+<span style="font-family: Verdana">Pedro</span></td>
+<td style="text-align: left; color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="196">
+<span style="font-family: Verdana">1,2</span></td>
+</tr>
+<tr height="17" style="height: 12.75pt">
+<td height="17" style="height: 12.75pt; color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border-left: .5pt solid windowtext; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="80">
+<span style="font-family: Verdana">Matemática</span></td>
+<td style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="106">
+<span style="font-family: Verdana">Semana Impar</span></td>
+<td style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: right; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="86">
+<span style="font-family: Verdana">2</span></td>
+<td style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="93">
+<span style="font-family: Verdana">Conferencia</span></td>
+<td style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="53">
+<span style="font-family: Verdana">Juan</span></td>
+<td style="text-align: left; color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="196">
+<span style="font-family: Verdana">3,4</span></td>
+</tr>
+<tr height="17" style="height: 12.75pt">
+<td height="17" style="height: 12.75pt; color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border-left: .5pt solid windowtext; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="80">
+<span style="font-family: Verdana">Matemática</span></td>
+<td style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="106">
+<span style="font-family: Verdana">Semana Impar</span></td>
+<td style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: right; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="86">
+<span style="font-family: Verdana">2</span></td>
+<td style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="93">
+<span style="font-family: Verdana">Conferencia</span></td>
+<td style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="53">
+<span style="font-family: Verdana">Jose</span></td>
+<td style="text-align: left; color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="196">
+<span style="font-family: Verdana">5,6</span></td>
+</tr>
+</table>
+<p> </p>
+<p> </p>
+<p><span style="font-family: Verdana">Lugares de reserva 205,206,207,208:</span></p>
+<p><span style="font-family: Verdana"> </span></p>
+<table border="0" cellpadding="0" cellspacing="0" id="table9" style="border-collapse: collapse; width: 528px">
+<colgroup>
+<col style="width: 56pt" width="75"/><col style="width: 68pt" width="91"/>
+<col style="width: 58pt" width="77"/><col style="width: 66pt" width="88"/>
+<col style="width: 241pt" width="321"/>
+</colgroup>
+<tr height="17" style="height: 12.75pt">
+<td height="17" style="height: 12.75pt; width: 56pt; font-weight: 700; font-family: Arial, sans-serif; color: windowtext; font-size: 10.0pt; font-style: normal; text-decoration: none; text-align: general; vertical-align: bottom; white-space: nowrap; border: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px; background: yellow" width="75">
+<span style="font-family: Verdana">Asignatura</span></td>
+<td style="width: 116px; font-weight: 700; font-family: Arial, sans-serif; color: windowtext; font-size: 10.0pt; font-style: normal; text-decoration: none; text-align: general; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: .5pt solid windowtext; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px; background: yellow">
+<span style="font-family: Verdana">Período</span></td>
+<td style="width: 104px; font-weight: 700; font-family: Arial, sans-serif; color: windowtext; font-size: 10.0pt; font-style: normal; text-decoration: none; text-align: general; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: .5pt solid windowtext; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px; background: yellow">
+<span style="font-family: Verdana"># Actividad</span></td>
+<td style="width: 98px; font-weight: 700; font-family: Arial, sans-serif; color: windowtext; font-size: 10.0pt; font-style: normal; text-decoration: none; text-align: general; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: .5pt solid windowtext; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px; background: yellow">
+<span style="font-family: Verdana">Clasificación</span></td>
+<td style="width: 115px; font-weight: 700; font-family: Arial, sans-serif; color: windowtext; font-size: 10.0pt; font-style: normal; text-decoration: none; text-align: general; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: .5pt solid windowtext; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px; background: yellow">
+<span style="font-family: Verdana">Lugares</span></td>
+</tr>
+<tr height="17" style="height: 12.75pt">
+<td height="17" style="height: 12.75pt; color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border-left: .5pt solid windowtext; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px">
+<span style="font-family: Verdana">Matemática</span></td>
+<td style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="116">
+<span style="font-family: Verdana">Semana Impar</span></td>
+<td style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: right; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="104">
+<span style="font-family: Verdana">1</span></td>
+<td style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="98">
+<span style="font-family: Verdana">Conferencia</span></td>
+<td style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="115">
+<span style="font-family: Verdana">201,202,203,204</span></td>
+</tr>
+<tr>
+<td height="17" style="height: 12.75pt; color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border-left: .5pt solid windowtext; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px">
+<span style="font-family: Verdana; color: #0000FF">Matemática</span></td>
+<td style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="116">
+<span style="font-family: Verdana; color: #0000FF">Semana Impar</span></td>
+<td style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: right; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="104">
+<span style="font-family: Verdana; color: #0000FF">1</span></td>
+<td style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="98">
+<span style="font-family: Verdana; color: #0000FF">Conferencia</span></td>
+<td style="color: windowtext; font-size: 10.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: Arial; text-align: general; vertical-align: bottom; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" width="115">
+<span style="font-family: Verdana; color: #0000FF">205,206,207,208</span></td>
+</tr>
+</table>
+<p> </p>
+<p style="text-align: left"><span style="font-family: Verdana; font-size: 0.875rem"><strong>Con el tiempo y la práctica el usuario logrará dominar 
+estas situaciones e inclusiva combinar ambos trucos</strong></span></p><p>
+<span style="font-family: Verdana; color: #0000FF; font-size: 1.5rem">Aulas fijas </span></p>
+<p><span style="font-family: Verdana; font-size: 0.875rem">Es posible establecer aulas fijas para los grupos por clasificación. De esta 
+manera se garantiza que las brigadas al agruparse realicen su actividad en un 
+aula específica. De hecho ocurre que centros de enseñanza como las primarias las 
+brigadas (llamadas grupos) tienen un aula en la cual realizan todas sus 
+actividades.</span></p>
+<p><span style="font-family: Verdana; font-size: 0.875rem">Áncora cuando esté generando intentará ubicar al grupo en cuestión en dicha 
+aula. Puede que no ocurra, por lo que es necesario tener una buena organización 
+de las aulas fijas, y un orden determinado en el momento de generar los 
+horarios. No obstante el sistema posibilita una vez generado los horarios 
+cambiarle los lugares a las actividades que desee.</span></p>
+<p><span style="font-family: Verdana; font-size: 0.875rem">Ejemplo: </span> </p>
+<p><span style="font-family: Verdana; font-size: 0.875rem">Supongamos que para nuestro ejemplo anterior, los grupos de conferencias 
+tengan las siguientes aulas fijas:</span></p>
+<ul>
+<li>
+<p><span style="font-family: Verdana; font-size: 0.875rem"> <em>grupo 1:</em> A-11, A-12       
+	aula fija 201</span></p></li>
+<li>
+<p><span style="font-family: Verdana; font-size: 0.875rem"> <em>grupo 2:</em> A-13, A-14       
+	aula fija 202</span></p></li>
+<li>
+<p><span style="font-family: Verdana; font-size: 0.875rem"> <em>grupo 3:</em> A-15, A-16       
+	aula fija 203</span></p></li>
+</ul>
+<p><span><span style="font-family: Verdana; color: #0000FF; font-size: 1.5rem">Accesos prohibidos a los lugares</span></span></p>
+<p><span style="font-family: Verdana; font-size: 0.875rem">Igualmente para los grupos por 
+clasificación de actividades es posible establecer prohibiciones en cuanto a 
+lugares.  Esto nos garantiza reservar lugares, u otra aplicación que el 
+usuario considere. El sistema por su parte respetará dicha decisión.</span></p>
+<p><span style="font-family: Verdana; font-size: 0.875rem">Se hace necesario aclarar, que a 
+pesar de que estén asignados ciertos lugares para una actividad, cuando se 
+prohíben los accesos para ciertos grupos, el sistema  no tendrá en cuenta 
+los lugares prohibidos. </span></p>
+<p><span style="font-family: Verdana"><span><span style="font-size: 0.875rem">Para nuestro ejemplo pude ser que 
+para el </span> </span><span style="font-size: 0.875rem">grupo 1 ( A-11, A-12) se prohíban los lugares 202, y la 203. 
+</span></span> </p>
+<p><span style="font-family: Verdana; font-size: 0.875rem"><strong>Importante:</strong> Si se prohíbe algún lugar que ha sido tomado como aula 
+fija, el sistema lo ignorará, es decir tiene prioridad el aula fija. Esta 
+situación reflejada en nuestro ejemplo sería prohibir al grupo 1 ( A-11, A-12) , 
+el aula 201, la cual es su aula fija.</span></p>
+<p><span style="font-family: Verdana; color: #0000FF; font-size: 1.5rem">Restricciones</span></p>
+<p><span style="font-family: Verdana; font-size: 0.875rem">Una de las opciones del sistema más utilizadas 
+es 
+sin dudas, y de hecho la más importante, <strong>restringir</strong>. Las restricciones 
+nos garantiza inhabilitar en tiempo, a algunos recursos o entidades, y nos 
+permite reflejar una serie de situaciones que se manifiestan en la vida y que 
+son necesarias traducirlas al sistema. </span></p>
+<p> </p>
+<p><span style="font-family: Verdana; font-size: 0.875rem">Los elementos que se pueden restringir son:</span></p>
+<ol>
+<li>
+<p><span style="font-family: Verdana; font-size: 0.875rem">Períodos</span></p>
+</li>
+<li>
+<p><span style="font-family: Verdana; font-size: 0.875rem">Especialidades</span></p>
+</li>
+<li>
+<p><span style="font-family: Verdana; font-size: 0.875rem">Clasificación de actividades</span></p>
+</li>
+<li>
+<p><span style="font-family: Verdana; font-size: 0.875rem">Brigadas</span></p>
+</li>
+<li>
+<p><span style="font-family: Verdana; font-size: 0.875rem">Asignaturas</span></p>
+</li>
+<li>
+<p><span style="font-family: Verdana; font-size: 0.875rem">Profesores</span></p>
+</li>
+<li>
+<p><span style="font-family: Verdana; font-size: 0.875rem">Lugares</span></p>
+</li>
+</ol>
+<p> </p>
+<p><span style="font-family: Verdana; font-size: 0.875rem">Como ejemplos de utilidad de las restricciones 
+tenemos:</span></p>
+<ul>
+<li>
+<p><span style="font-family: Verdana; font-size: 0.875rem">un período determinado restringido 
+	por días feriados</span></p></li>
+<li>
+<p><span style="font-family: Verdana; font-size: 0.875rem">clasificaciones de actividades (vistas 
+	anteriormente) restringidas por sesiones de día (mañana o tarde)</span></p>
+</li>
+<li>
+<p><span style="font-family: Verdana; font-size: 0.875rem">brigadas que necesitan turnos determinados 
+	para realizar actividades fijas que no son necesarias plantearlas al 
+	sistema, como son teleclases, u otras</span></p></li>
+<li>
+<p><span style="font-family: Verdana; font-size: 0.875rem">profesores que no pueden participar en turnos 
+	determinados por problemas personales, tener cursos de superación u otras 
+	actividades preconcebidas</span></p></li>
+<li>
+<p><span style="font-family: Verdana; font-size: 0.875rem">lugares que en algún momento deben estar cerrados por 
+	cuestiones de calidad o reservados para otras actividades</span></p></li>
+<li>
+<p><span style="font-family: Verdana; font-size: 0.875rem">asegurarnos que una actividad se va a efectuar 
+en una zona determinada del horario.</span></p>
+</li>
+<li>
+<p><span style="font-family: Verdana; font-size: 0.875rem">asegurarnos que un grupo de personas 
+cualesquiera tengan un tiempo para realizar una actividad determinada, como 
+puede ser el almuerzo.</span></p></li>
+<li>
+<p><span style="font-family: Verdana; font-size: 0.875rem">asignaturas que por su nivel de complejidad no deben 
+	realizarse muy tardes en el día</span></p></li>
+<li>
+<p><span style="font-family: Verdana; font-size: 0.875rem">especialidades que se les quiera establecer una actividad 
+	extra docente.</span></p>
+<p> </p></li>
+</ul>
+<p><span style="font-family: Verdana; font-size: 0.875rem">Existen otras muchas utilidades que se le 
+pueden dar a las restricciones. Eso dependerá del usuario.</span></p>
+<p>
+<span style="font-family: Verdana">
+<span><span style="font-size: 0.875rem">Áncora</span></span><span><span style="font-size: 0.875rem"> necesita conocer cual es el 
+plan de actividades para un período, especialidad, y año de estudio.A partir de esa información el se 
+encargará de crear un horario para una determinada especialidad, año y período, 
+lo más óptimo posible, de acuerdo a su filosofía de trabajo, y sin violar 
+ninguna restricción ni condición que se haya establecido. </span></span></span></p>
+<p><span style="font-family: Verdana; font-size: 0.875rem"><span><strong>Nota:</strong> Mientras 
+menos recursos o más restringidos estos, más difícil se hará encontrar una 
+solución, y mucho más difícil una óptima. Áncora asigna 
+actividades partiendo de los recursos que se disponen.</span></span></p>
+<p><span style="font-family: Verdana; color: #0000FF; font-size: 2rem">
+    Prioridades</span></p>
+<p><span style="font-family: Verdana; font-size: 0.875rem">Áncora mantiene una política de no violar las 
+órdenes ni las peticiones de 
+sus usuarios. Una de ellas son las prioridades.</span></p>
+<p><span style="font-family: Verdana; font-size: 0.875rem"> </span></p>
+<p style="text-align: justify"><span style="font-family: Verdana; font-size: 0.875rem">
+Hay que tener 
+en cuenta que parte del proceso de planificación de horarios debe estar dado por 
+el trabajo del usuario, pues la vida es muy dinámica y muchas cosas cambian con 
+el tiempo. </span></p>
+<p style="text-align: justify"> </p>
+<p><span style="font-family: Verdana; font-size: 0.875rem">Usted puede 
+establecer el orden de una serie de elementos. Puede que se quiera que dos o más 
+elementos tengan la misma prioridad. Aunque se haga, en dichos elementos tiene 
+que haber un orden. Pero al establecerse la misma prioridad, significa que el 
+generador puede tomar el orden que el desee, y claro está, tomará el que se 
+encuentre.</span></p>
+<p><span style="font-family: Verdana; font-size: 0.875rem"> </span></p>
+<p><span style="font-family: Verdana; font-size: 0.875rem">Al 
+establecerse dicho orden, se hace inviolable, lo cual puede provocar una no 
+solución a nuestra planificación. Por tanto se hace necesario que en el momento 
+de establecer prioridades se piense bien lo que se va a hacer. </span></p>
+<p> </p>
+<p><span style="font-family: Verdana; font-size: 0.875rem"><strong>Las prioridades son utilizadas en:</strong></span></p>
+<ol>
+<li>
+<p><span style="font-family: Verdana; font-size: 0.875rem">El orden de las clasificaciones de actividades</span></p></li>
+<li>
+<p>
+<span style="font-family: Verdana; font-size: 0.875rem">
+	Grupos por clasificación de actividad </span></p></li>
+<li>
+<p><span style="font-family: Verdana; font-size: 0.875rem">Lugares por actividad</span></p></li>
+</ol>
+</div>
+</body>
+</html>

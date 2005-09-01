@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Áncora GOH 1.0.1</title>
+  <style>
+    body {font-family: Arial, Helvetica, sans-serif; line-height: 1.5; margin: 1.5rem;}
+    img {max-width: 100%; height: auto;}
+    table {border-collapse: collapse;}
+  </style>
+</head>
+<body>
+<div style="z-index: 2">
+<p> </p>
+<table border="1" bordercolor="#111111" cellpadding="0" cellspacing="0" id="AutoNumber2" style="border-collapse: collapse; border-width: 0" width="100%">
+<tr>
+<td style="border-style: none; border-width: medium; background-color: #C0C0C0" width="100%">
+<p style="text-align: center"><span style="color: #000080; font-size: 1.5rem">Análisis de horarios</span></p></td>
+</tr>
+</table>
+<p>
+ </p>
+<p> </p>
+<p>Los análisis de horarios son de mucha utilidad cuando se 
+desea saber que tan óptimo es un horario. Es importante conocer que, no por el 
+hecho que el sistema pueda evaluar un horario determinado sea capaz de 
+mejorarlo. El análisis que se hace es el resultado que pudo obtener el 
+generador. Los parámetros que se utilizan para dar este análisis son:</p>
+<p> </p>
+<p><strong>Total de actividades:</strong> Es la suma de todas las 
+actividades que se posee un horario en específico, en conjunto con todas las 
+brigadas.</p>
+<p> </p>
+<p>Ejemplo:</p>
+<p> </p>
+<p>Supongamos que tenemos el siguiente desglose de actividades 
+para una Especialidad, Año y Período:</p>
+<p>            </p>
+<table border="1" id="table1" width="32%">
+<tr>
+<td style="background-color: #FFFF66" width="123">Asignatura</td>
+<td style="background-color: #FFFF66" width="64">1</td>
+<td style="background-color: #FFFF66" width="47">2</td>
+<td style="background-color: #FFFF66" width="48">3</td>
+</tr>
+<tr>
+<td width="123">Matemática</td>
+<td width="64">Conf</td>
+<td width="47">Cp</td>
+<td width="48">Cp</td>
+</tr>
+<tr>
+<td width="123">Física</td>
+<td width="64">Conf</td>
+<td width="47">Cp</td>
+<td width="48"> </td>
+</tr>
+<tr>
+<td width="123">Química</td>
+<td width="64">Conf</td>
+<td width="47">Cp</td>
+<td width="48"> </td>
+</tr>
+<tr>
+<td width="123">Computación</td>
+<td width="64">Conf</td>
+<td width="47">Cp</td>
+<td width="48"> </td>
+</tr>
+<tr>
+<td width="123">Historia</td>
+<td width="64">Conf</td>
+<td width="47"> </td>
+<td width="48"> </td>
+</tr>
+</table>
+<p> </p>
+<p>como se puede observar existen 10 actividades en este 
+desglose. Si suponemos que las brigadas  que deben realizar estas 
+actividades son 7, entonces el Total de actividades será: </p>
+<p> </p>
+<p>            
+7 brigadas x 10 actividades/período  = 70 actividades.</p>
+<p> </p>
+<p><strong>Total de actividades fijas: </strong>De la misma forma que el 
+total de actividades, el total de actividades fijas solo cuenta las que el 
+usuario haya fijado previamente a la generación. Si luego de generar, el usuario 
+fija alguna otra actividad, e sistema aumentará este total, pero disminuirá el
+<strong>Total de actividades generadas, </strong>para mantener el mismo porcentaje.</p>
+<p> </p>
+<p><strong>Total de actividades generadas:</strong> Son  todas las 
+actividades que en el momento de generación el sistema pudo colocar. Para que el 
+resultado sea un 100% este total debe ser igual a la diferencia entre el <strong>
+Total de actividades </strong>y el <strong>Total de actividades fijas</strong>.</p>
+<p> </p>
+<p><strong>Actividades rechazadas</strong>: Son todas las actividades que 
+en el momento de generación el sistema no pudo colocar. Estas se pueden 
+visualizar en la opción <span style="color: #000080">Actividades sin asignar</span> del 
+menú <span style="color: #000080">Horarios.</span></p>
+<p> </p>
+<p><strong>Total de turnos ocupados:</strong> Es el conjunto de todos los 
+turnos ocupados por todas las brigadas en el Período y de la Especialidad y Año 
+en cuestión.</p>
+<p> </p>
+<p>Supongamos que tenemos los siguientes 3 horarios:</p>
+<p><img border="0" src="Análi3.gif"/></p>
+<p>El  primero tiene 11 turnos ocupados, el segundo 12 turnos ocupados, y 
+el tercero 9, para un total de 32 turnos ocupados.</p>
+<p><strong>Turnos en zonas de prioridad:</strong> Son aquellos turnos del <strong>Total de 
+turnos ocupados</strong>, que están en su zona priorizada según su
+<span style="color: #000080">clasificación de actividad</span> .</p>
+<p> </p>
+<p><strong>¿Cómo mostrar un análisis de horarios?</strong></p>
+<p><img border="0" src="Análi4.gif"/></p>
+<ol>
+<li>Seleccione  la opción<span style="color: #000080"> Horarios generados</span> 
+	del menú <span style="color: #000080">Horarios </span>o presione la tecla F8</li>
+<li>Aparecerá un listado de todos los horarios generados hasta el momento. 
+	Seleccione uno.</li>
+<li>Luego seleccione la opción <span style="color: #000080">Analizar</span> en el 
+	menú <span style="color: #000080">Opciones</span> o presione la tecla F5</li>
+</ol>
+<p>        <strong><span style="color: #000080">
+<img border="0" src="Análi1.gif"/></span></strong></p>
+<p>    4. Aparecerá la siguiente ventana:</p>
+<p><img border="0" src="Análi1.jpg"/></p>
+<p> </p>
+</div>
+<p style="text-align: justify"> </p>
+<p> 
+
+</p>
+</body>
+</html>

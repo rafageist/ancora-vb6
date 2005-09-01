@@ -1,0 +1,36 @@
+body{
+    padding: 0px;
+    margin: 0px;
+    font-family: Century Gothic;
+}
+
+div.top{
+    height: 40px;
+    background: navy;
+    color: white;
+    font-size: 24px;
+    padding: 4px;
+}
+
+div.menu{
+    background: blue;
+    color: white;
+    padding: 6px;
+}
+
+a.menuitem{
+    text-decoration: none;
+    color: white;
+    padding: 4px;
+}
+a.menuitem:hover{
+    background: navy;
+    color: white;
+}
+
+div.content{
+    padding: 4px;
+    width: 100%;
+    overflow: auto;
+    height:80%;
+}
