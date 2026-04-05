@@ -1,3 +1,111 @@
+'===============================================================================
+' modDataGenerator - Schedule Generation Algorithm Module
+'===============================================================================
+' PURPOSE:
+'   Contains the core scheduling algorithm including the MPI (Matrix of Possible
+'   Starts) calculation and activity assignment logic.
+'
+' CORE CONCEPTS:
+'   ┌─────────────────────────────────────────────────────────────────────────┐
+'   │  MPI (MATRIZ DE POSIBLES INICIOS)                                    │
+'   │  =========================================================================│
+'   │  A 2D matrix [days × slots] indicating valid starting positions        │
+'   │  for scheduling an activity. Each cell contains:                        │
+'   │    • valor: Boolean - Is this slot valid?                             │
+'   │    • lug: TFiltro - Available places                                  │
+'   │    • prof: TFiltro - Available professors                            │
+'   │    • motivo: Long - Reason code if invalid (0=valid)                  │
+'   │                                                                         │
+'   │  WHY MPI?:                                                             │
+'   │  Rather than trying random placements, we pre-compute ALL valid slots.  │
+'   │  This allows:                                                          │
+'   │    • Early detection of unschedulable activities                      │
+'   │    • Optimal slot selection via heuristics                            │
+'   │    • Clear feedback on why scheduling failed                          │
+'   └─────────────────────────────────────────────────────────────────────────┘
+'
+' ALGORITHM FLOW:
+'   1. Calculate MPI for each activity (considering all constraints)
+'   2. If MPI has valid slots, select best using heuristics
+'   3. Create assignment and update constraint matrices
+'   4. Repeat until all activities processed or impossible
+'
+' CONSTRAINT CHECKING:
+'   The PosibleInicio() function checks these constraints in order:
+'   ┌──────────────────────────────────────────────────────────────────┐
+'   │ CONSTRAINT           │ CHECKED VIA                                │
+'   ├──────────────────────┼────────────────────────────────────────────┤
+'   │ Period availability   │ Period.rest[day,slot] = False              │
+'   │ Classification rules │ Clasif.rest[day,slot] = False              │
+'   │ Brigade availability │ Brigadier.rest[day,slot] = False            │
+'   │ Subject availability │ asig.rest[day,slot] = False                │
+'   │ Zone priority        │ ZPriori[day,slot] matches desired zone     │
+'   │ Professor available  │ FiltraProfexAct() returns non-empty        │
+'   │ Place available     │ FiltraLugxAct() returns non-empty         │
+'   │ Capacity fits       │ QuitaSegunCapacidad() filters too-small    │
+'   │ No prohibitions    │ QuitaSegunProhibidos() applies rules       │
+'   │ HRT inheritance     │ estaRestringidoPorHerencia() check         │
+'   └──────────────────────────────────────────────────────────────────┘�
+'
+' HEURISTICS FOR OPTIMAL SELECTION:
+'   When multiple valid slots exist, these rules determine the best choice:
+'
+'   1. PLACE SELECTION (SelectLugarOptimo):
+'      • Prefer same place used earlier that day (continuity)
+'      • If not, prefer place used by adjacent brigades (proximity)
+'      • If none, choose least restricted place (load balancing)
+'      • Consider distance between consecutive places
+'
+'   2. PROFESSOR SELECTION (FiltraProfexAct):
+'      • Filter by group assignment (professor must teach this group)
+'      • Check availability for entire activity duration
+'      • Consider HRT inheritance constraints
+'
+'   3. SLOT SELECTION:
+'      • ZPriori (zone priority) preferences
+'      • Contiguous slots when classification requires it (ct > 1)
+'      • Day continuity when mismodia flag is set
+'
+' AND_MPI / OR_MPI OPERATIONS:
+'   ┌─────────────────────────────────────────────────────────────────┐
+'   │ AND_MPI(brgs, per, asg, act, zona)                             │
+'   │ ─────────────────────────────────────────────────────────────────│
+'   │ PURPOSE: Find slots where ALL brigades in a group can be scheduled│
+'   │ INPUT: Multiple brigade indices                                  │
+'   │ OUTPUT: Combined MPI where only common valid slots remain        │
+'   │ USE CASE: Group activities must happen simultaneously           │
+'   └─────────────────────────────────────────────────────────────────┘
+'
+'   ┌─────────────────────────────────────────────────────────────────┐
+'   │ OR_MPI(mpi1, mpi2)                                             │
+'   │ ─────────────────────────────────────────────────────────────────│
+'   │ PURPOSE: Combine schedules where alternatives exist               │
+'   │ INPUT: Two MPI matrices                                         │
+'   │ OUTPUT: Combined MPI where ANY valid slot remains               │
+'   │ USE CASE: Multiple professors for same activity                 │
+'   └─────────────────────────────────────────────────────────────────┘
+'
+' ASSIGNMENT CREATION (AsignaActividad):
+'   When an activity is assigned:
+'   1. Reserve the time slot for: brigade, professor, place, resources
+'   2. Create TActAsignada record with all identifiers
+'   3. Update global constraint matrices
+'   4. Handle multi-slot activities (ct > 1)
+'
+' ZONE PRIORITY (ZPriori):
+'   ┌─────────────────────────────────────────────────────────────────┐
+'   │ Each activity classification has a ZPriori matrix:                │
+'   │   ZPriori[day, slot] = priority_value                          │
+'   │   Higher value = more preferred time                            │
+'   │                                                                         │
+'   │ USAGE:                                                         │
+'   │   • Theory classes preferred in morning (higher values)          │
+'   │   • Labs preferred in afternoon                                 │
+'   │   • Physical education preferred in specific slots               │
+'   │   • Generator tries to match activity type to preferred zones   │
+'   └─────────────────────────────────────────────────────────────────┘
+'
+'===============================================================================
 Attribute VB_Name = "modDataGenerator"
 Attribute VB_Ext_KEY = "RVB_UniqueId" ,"489BC2500164"
 Option Explicit
@@ -7,17 +115,26 @@ Rem **                       GENERADORES
 Rem **
 Rem *************************************************************************
 
+'------------------------------------------------------------------------------
+' TActxProfexDia - Tracks professor activity scheduling per day
+'------------------------------------------------------------------------------
+' Used during generation to track:
+'   • Which subjects/activities a professor teaches
+'   • Which groups each professor attends
+'   • MPI (possible starts) for each day
+'   • Ranking/priority information
+'------------------------------------------------------------------------------
 Type TActxProfexDia
-    iasig As Long
-    act As Long
-    per As Long
-    idprofe As Long
-    cant(1 To MAX_DIAS) As Long
-    priori(1 To MAX_DIAS) As Long
-    gruposQueAtiende() As Long
-    cantGrupos As Long
-    rango As TRango
-    misAct(1 To MAX_DIAS, 1 To MAX_TURNOS) As Boolean
+    iasig As Long              ' Subject index
+    act As Long                ' Activity index within subject
+    per As Long                ' Period index
+    idprofe As Long            ' Professor index
+    cant(1 To MAX_DIAS) As Long        ' Activity count per day
+    priori(1 To MAX_DIAS) As Long      ' Priority per day
+    gruposQueAtiende() As Long          ' Groups professor teaches
+    cantGrupos As Long                  ' Number of groups
+    rango As TRango                     ' Valid slot range for activity
+    misAct(1 To MAX_DIAS, 1 To MAX_TURNOS) As Boolean  ' Activity presence matrix
 End Type
 Public ProfesoresEnCurso() As TActxProfexDia
 Public cantProfesEnCurso As Long
@@ -546,7 +663,7 @@ Public Function RangoV2(n As Long, arr As TArrInt, min As Long, max As Long) As 
 End Function
 
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-'Multiplicaci�n Logica: devuelve una matriz MPI1
+'Multiplicaci�n Logica: devuelve una matriz MPI1
 'A partir de un conjunto de brigadas, calcula los posibles inicios en comun para
 'todas ellas
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -572,7 +689,7 @@ Public Function AND_MPI(brgs As TFiltro, per As Long, asg As Long, act As Long, 
                 PI2 = PosibleInicio(per, j, k, asg, act, brgs.id(i), zona)
                 If parche_AND_MPI_EXCEPTO Then
                     Rem EXCEPTO
-                    'compruebo que la actividad no est� en asignada para el turno en curso
+                    'compruebo que la actividad no est� en asignada para el turno en curso
 
                     For ll = 1 To cantFiltroAsignaciones
 
@@ -675,7 +792,7 @@ Public Sub AsignaActividad(per As Long, brgs As TFiltro, asg As String, act As L
                     
                     k = prioriza.Priorizado
 
-                    'lo a�ado
+                    'lo a�ado
                     temprecursos(j).recursos.add .recursos(k).value
                     .recursos.Remove k
                     .prioridades.Remove k
@@ -722,7 +839,7 @@ Public Sub AsignaActividad(per As Long, brgs As TFiltro, asg As String, act As L
 End Sub
 
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-'Sumatoria L�gica
+'Sumatoria L�gica
 'A partir de dos MPI1 devuelve la suma logica de las dos
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 

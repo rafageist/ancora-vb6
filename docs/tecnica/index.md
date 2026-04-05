@@ -51,6 +51,9 @@ This follows the **Rational Unified Process (RUP)** methodology for software dev
 | Module | Description | Status |
 |--------|-------------|--------|
 | [Data Structures](./03-especificacion/data-structures.md) | UDT definitions | 🔄 |
+| [MPI Algorithm](./03-especificacion/mpi-algorithm.md) | Core scheduling algorithm | 🔄 |
+| [LLM Survival Guide](./03-especificacion/llm-survival-guide.md) | AI assistant guide for codebase | 🟢 |
+| [Design Decisions](./03-especificacion/design-decisions.md) | Architecture rationale | 🔄 |
 | [Constants](./03-especificacion/constants.md) | System constants | ⏳ |
 | [API Reference](./03-especificacion/api-reference.md) | Public interfaces | ⏳ |
 

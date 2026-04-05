@@ -1,3 +1,74 @@
+'===============================================================================
+' clsAncora - Main Data Controller Class
+'===============================================================================
+' PURPOSE:
+'   This is the central controller for all data operations in Áncora.
+'   It manages all entities (periods, specialties, brigades, subjects, professors,
+'   places, resources) and their relationships.
+'
+' ARCHITECTURE:
+'   ┌─────────────────────────────────────────────────────────────────┐
+'   │                         clsAncora                               │
+'   │  (Central data controller - owns all domain entities)         │
+'   ├─────────────────────────────────────────────────────────────────┤
+'   │  Entity Collections:                                            │
+'   │    • periodos (TarrPeriodo) - Time blocks                      │
+'   │    • Especialidad() - Academic programs                       │
+'   │    • Brigadier() - Student groups                              │
+'   │    • asig() - Subjects with activities                        │
+'   │    • clasif() - Activity classifications                      │
+'   │    • profe() - Professors                                     │
+'   │    • lugar() - Classrooms/places                              │
+'   │    • recursos() - Equipment/resources                          │
+'   │    • hrt - Time constraint inheritance system                  │
+'   │                                                              │
+'   │  Assignment Tracking:                                          │
+'   │    • Asignaciones() - Scheduled activities                    │
+'   │    • Imposibles() - Failed assignments                        │
+'   │    • LugXact() - Place assignments per activity               │
+'   │    • ProfeXAct() - Professor assignments per activity         │
+'   │                                                              │
+'   │  Indexing:                                                    │
+'   │    • hashPxAct - Hash index for Professor×Activity            │
+'   │    • hashLxAct - Hash index for Place×Activity                │
+'   │    • hashPer, hashEsp, hashBrg, etc. - Entity hash indexes   │
+'   │                                                              │
+'   │  Metrics:                                                     │
+'   │    • cantEsp, cantBrg, cantAsig, etc. - Entity counts        │
+'   │    • cantAsignaciones - Number of scheduled items             │
+'   │    • cantImposibles - Number of failed items                  │
+'   └─────────────────────────────────────────────────────────────────┘
+'
+' DESIGN DECISIONS:
+'   1. COMPOSITION OVER INHERITANCE
+'      Each entity type has its own array (Especialidad, Brigadier, etc.)
+'      despite sharing common fields (id, descrip) via TRecurso structure.
+'      This allows independent management and different constraints per entity.
+'
+'   2. BIDIRECTIONAL RELATIONSHIPS
+'      Entities reference each other via string IDs (idasig, idprofe, etc.)
+'      The IndexById() function resolves these at runtime.
+'      This provides flexibility for data import/export but requires careful
+'      consistency management.
+'
+'   3. HRT (TIME CONSTRAINT INHERITANCE)
+'      Constraints can be inherited between entity types. For example:
+'      Period → Specialty means "if period X is restricted, specialty Y is too."
+'      This is managed by the TGOH_arrHRT collection.
+'
+'   4. ACTIVITY BREAKDOWN (DESGLOSE)
+'      Each subject (asignatura) has a breakdown of activities per period.
+'      TDesglose contains the list of activities and their properties.
+'      This allows subjects to have different activities in different periods.
+'
+'   5. PRIORITY SYSTEM FOR PLACES (LxAct)
+'      When multiple places are valid for an activity, priority determines
+'      preference. Lower priority number = higher preference.
+'      This allows fine-grained control over place assignment.
+'
+' VERSION: 1.0
+' AUTHOR: [Original Developer]
+'===============================================================================
 VERSION 1.0 CLASS
 BEGIN
   MultiUse = -1  'True
@@ -15,7 +86,8 @@ Attribute VB_Ext_KEY = "SavedWithClassBuilder6" ,"Yes"
 Attribute VB_Ext_KEY = "Top_Level" ,"Yes"
 Attribute VB_Ext_KEY = "RVB_UniqueId" ,"489BC264022B"
 Option Explicit
-'Clase controladora de �ncora
+' MAIN DATA CONTROLLER
+' This class orchestrates all data operations for the scheduling system
  
 Public HoraInicialGeneracion As String
 Public IMPOSIBLES_NOW As Long
@@ -57,7 +129,7 @@ Public hashAsignaciones_asig As TAtom_arrVariant
 
 'IGeneral
 Public CD As Long 'Cantidad de dias
-Public ct As Long 'Cantidad de turnos por d�a
+Public ct As Long 'Cantidad de turnos por d�a
 Public hrt As TGOH_arrHRT
 
 Public Sub deleteAsignatura(ByVal id As String)
@@ -736,7 +808,7 @@ Public Function getIndexOfPxAct(ByVal asg As String, ByVal per As String, ByVal 
     Dim i As Long
 
     If hashing Then
-        'previamente debe haberse llamado al m�todo updatehashpxact
+        'previamente debe haberse llamado al m�todo updatehashpxact
         getIndexOfPxAct = hashPxact(asg).idper(per).idact(act).idprofes(idprofe).index
         Exit Function
     End If
@@ -1044,7 +1116,7 @@ Exit Function
     Dim idd As Long
     IndexById = 0
     pid = kernel.utils.trunca(LCase(pid))
-    'busco en la cach�
+    'busco en la cach�
     idd = -1
     idd = cacheID(arreglo).Item(pid).idx
 
@@ -2067,7 +2139,7 @@ Public Sub clearAsignacionesOfPeriod(Optional ByVal idper As String = "", Option
 
                 For i = 1 To cantAsignaciones
  '                   interface.console.Progress _
-  '                  "Eliminando asignaciones de actividades >> Especialidad = " & interface.getRS_Especialidad(0, asig(k).idesp) & ", Nivel = " & asig(k).Nivel & ", Per�odo = " & interface.getRS_Periodo(0, periodos(per).id), i / _
+  '                  "Eliminando asignaciones de actividades >> Especialidad = " & interface.getRS_Especialidad(0, asig(k).idesp) & ", Nivel = " & asig(k).Nivel & ", Per�odo = " & interface.getRS_Periodo(0, periodos(per).id), i / _
    '                 cantAsignaciones * 100
 
                     With Asignaciones(i)
@@ -2549,7 +2621,7 @@ Public Sub QuitaHuecos(idbrg As String, per As String, sentido As Long)
     Dim mayores As Boolean
     ibrg = IndexById(dBRIGADA, idbrg, 0)
     mayores = False
-    r = interface.MessageDlg("Quitar huecos", "�Desea que el sistema trate de colocar en en zonas priorizadas mayores que 1?", vbQuestion, "No", "S�")
+    r = interface.MessageDlg("Quitar huecos", "�Desea que el sistema trate de colocar en en zonas priorizadas mayores que 1?", vbQuestion, "No", "S�")
 
     If r = 2 Then mayores = True
     Dim esp As Long, ixper As Long
@@ -2614,9 +2686,9 @@ Public Sub QuitaHuecos(idbrg As String, per As String, sentido As Long)
                                     r = interface.MessageDlg("Quitando huecos", "Es posible quitar un hueco para " & Chr(13) & Chr(13) & " Asignatura: (" & kernel.utils.trunca(.idasig) & ")" & kernel.utils.trunca(asig(iasig).comun.descrip) & Chr(13) & _
                                     " Actividad: #" & .idact & "(" & kernel.utils.trunca(clasif(ic).comun.id) & ") " & kernel.utils.trunca(clasif(ic).comun.descrip) & Chr(13) & _
                                     Chr(13) & " en el turno " & k & Chr(13) & " pero no para el LUGAR que tiene seleccionado" & _
-                                    Chr(13) & " �Desea que el sistema le asigne otro lugar? " & _
+                                    Chr(13) & " �Desea que el sistema le asigne otro lugar? " & _
                                     Chr(13) & Chr(13) & "A saber:es posible que en otro turno si se pueda con dicho LUGAR. ", _
-                                    vbQuestion, "No", "S�")
+                                    vbQuestion, "No", "S�")
 
                                     If r = 2 Then
                                         daleLugar = True
@@ -2644,11 +2716,11 @@ puede1:
                                     Chr(13) & " en el turno " & k & Chr(13) & _
                                     " pero no para el PROFESOR que tiene seleccionado" _
                                     & Chr(13) & _
-                                    " �Desea que el sistema le asigne otro profesor? " _
+                                    " �Desea que el sistema le asigne otro profesor? " _
                                     & Chr(13) & Chr(13) & _
                                     " A saber:es posible que en otro turno si se pueda con dicho PROFESOR.", _
                                      vbQuestion, _
-                                    "No", "S�")
+                                    "No", "S�")
 
                                     If r = 2 Then
                                         daleprofe = True
@@ -3392,7 +3464,7 @@ Public Sub AutoLxAct(ix As Long, Optional mismaEspecialidad As Boolean = False, 
                                 interface.console.Writer "Clonados " & _
                                 LugXact(ix).cantLug & " lugares para la actividad # " & _
                                 k & " de la asignatura " & asig(i).comun.descrip & _
-                                " en el per�odo " & _
+                                " en el per�odo " & _
                                 interface.getRS_Periodo(iiper)
 
                             End If
@@ -3874,7 +3946,7 @@ Public Sub updatehash()
 
     
 
-    interface.console.Progress "Acelerando el motor de b�squeda", 0
+    interface.console.Progress "Acelerando el motor de b�squeda", 0
 
     For i = 1 To 9
 
@@ -4152,7 +4224,7 @@ End Function
 'Realiza un AND con todas las restricciones de los objetos pasados
 'los arreglos booleanos tienen marcados aquellos objetos que se desean analizar
 'por ejemplo especs(1)=true significa que la especialidad(1) se tiene en cuenta
-'en el AND. Esta funci�n es utulizada para conocer Huecos Comunes
+'en el AND. Esta funci�n es utulizada para conocer Huecos Comunes
 
 Public Function getANDRestrictions(per As Long, especs() As Boolean, brgs() As Boolean, asg() As Boolean, cla() As Boolean, prof() As Boolean, lugs() As Boolean, res() As Boolean) As TGOH_arrRestriccion
 
@@ -5203,7 +5275,7 @@ Public Sub RESTORE_LCaseID_All()
     'periodos
 
     For i = 1 To periodos.Count
-        interface.console.Progress "reparando identificadores...Per�odos", kernel.utils.Porciento(i, periodos.Count)
+        interface.console.Progress "reparando identificadores...Per�odos", kernel.utils.Porciento(i, periodos.Count)
         periodos(i).id = LCase(periodos(i).id)
     Next
 
@@ -5603,7 +5675,7 @@ Public Function sePuedeEliminar(arreglo As Long, id As Long) As String
             For i = 1 To cantAsignaciones
 
                 If kernel.utils.idigual(Asignaciones(i).idperiodo, periodos(id).id) Then
-                    a = "- Existen actividades asignadas para este per�odo" + Chr(13)
+                    a = "- Existen actividades asignadas para este per�odo" + Chr(13)
                     Exit For
                 End If
 
@@ -5682,7 +5754,7 @@ Public Function sePuedeEliminar(arreglo As Long, id As Long) As String
                             Then
 
                             a = _
-                            "- La clasificaci�n est� utilizada en 'desgloses de actividades' (" _
+                            "- La clasificaci�n est� utilizada en 'desgloses de actividades' (" _
                             + kernel.utils.trunca(asig(i).comun.id) + ", " + _
                             kernel.utils.trunca(asig(i).desglose(j).idperiodo) + ")" + _
                             Chr(13)
@@ -5704,7 +5776,7 @@ Public Function sePuedeEliminar(arreglo As Long, id As Long) As String
                         clasif(id).comun.id) And Brigada(i).GrupoXClasif(j).grupo <> 0 _
                         Then
 
-                        a = a + "- Existen grupos de esta clasificaci�n" + Chr(13)
+                        a = a + "- Existen grupos de esta clasificaci�n" + Chr(13)
                         GoTo 10
                     End If
 
@@ -5718,7 +5790,7 @@ Public Function sePuedeEliminar(arreglo As Long, id As Long) As String
             For i = 1 To cantPxAct
 
                 If kernel.utils.idigual(ProfeXAct(i).idprofes, profe(id).id) Then
-                    a = "- Este profesor est� asignado a una actividad (" & _
+                    a = "- Este profesor est� asignado a una actividad (" & _
                     kernel.utils.trunca(ProfeXAct(i).para.idasig) + ", " & _
                     kernel.utils.trunca(ProfeXAct(i).para.idper) + ", act #" & _
                     ProfeXAct(i).para.idact & _
@@ -5736,7 +5808,7 @@ Public Function sePuedeEliminar(arreglo As Long, id As Long) As String
                 For j = 1 To LugXact(i).cantLug
 
                     If kernel.utils.idigual(LugXact(i).idlug(j), lugar(id).id) Then
-                        a = "- Este lugar est� asignado a una actividad (" & _
+                        a = "- Este lugar est� asignado a una actividad (" & _
                         LugXact(i).para.idasig + ", " & LugXact(i).para.idper & _
                         ", act #" & LugXact(i).para.idact & ")" & _
                         vbLf
@@ -5760,7 +5832,7 @@ Public Function sePuedeEliminar(arreglo As Long, id As Long) As String
                             & "", recursos(id).id) _
                             Then
 
-                            a = "- Este recurso est� asignado a una actividad (" + _
+                            a = "- Este recurso est� asignado a una actividad (" + _
                             recursosXact(i).asg + ", " + recursosXact(i).per + _
                             ", act #" + recursosXact(i).act + ")" + _
                             Chr(13)
@@ -5920,7 +5992,7 @@ End Function
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 '1- Por clasif:  Priorizar el orden de las clasificaciones
 '2- Por niveles: Priorizando la cantidad de actividad de las asignaturas
-'3- parche: Maximizar la agrupacion de las actividades seg�n su clasificacion
+'3- parche: Maximizar la agrupacion de las actividades seg�n su clasificacion
 
 Public Sub Generar(esp As Long, Nivel As Long, per As Long, forma As Long, PARCHE As Long, compactar As Long, parche1 As Boolean, buscalugar As Boolean)
 
@@ -6905,7 +6977,7 @@ SePudoColocar:
 End Sub
 
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-'Devuelve la cantidad de niveles que determinan un conjunto de asignaturas en un per�odo
+'Devuelve la cantidad de niveles que determinan un conjunto de asignaturas en un per�odo
 'y pertenecientes a una misma especialidad y Nivel
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
@@ -7307,7 +7379,7 @@ Public Function EstaAsignada(brg As String, per As String, asg As String, act As
 End Function
 
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-'Devuelve el d�a de una asignacion
+'Devuelve el d�a de una asignacion
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Public Function BuscaDiaAsignacion(brg As String, per As String, asg As String, act As Long) As Long
@@ -7374,7 +7446,7 @@ Public Function permuta(ByVal id1 As Long, ByVal id2 As Long) As Boolean
     act2(1) = Asignaciones(id2)
     per = IndexById(dPERIODO, act1(1).idperiodo, 0)
     
-    'comprobar que la actividad1 estar� en rango
+    'comprobar que la actividad1 estar� en rango
     
     iasig = IndexById(dASIG, act1(1).idasig, 0)
     listaidbrg1 = BrigadasDeGrupo(iclasif1, IndexById(dESPECIALIDAD, asig(iasig).idesp, 0), asig(iasig).Nivel, grupo1)
@@ -7415,7 +7487,7 @@ Public Function permuta(ByVal id1 As Long, ByVal id2 As Long) As Boolean
 
     End If
 
-    'comprobar que la actividad2 estar� en rango
+    'comprobar que la actividad2 estar� en rango
     
     iasig = IndexById(dASIG, act2(1).idasig, 0)
     listaidbrg2 = BrigadasDeGrupo(iclasif2, IndexById(dESPECIALIDAD, asig(iasig).idesp, 0), asig(iasig).Nivel, grupo2)
@@ -8130,7 +8202,7 @@ Public Sub ProfesoresDuplicados()
 
     Open App.path + "\AncoraInforme_ProfesDuplicados.txt " For Output As #1
     Print #1, "-------------------------------------------------------"
-    Print #1, "REPORTE DE �ncora ------------- Profesores duplicados: "
+    Print #1, "REPORTE DE �ncora ------------- Profesores duplicados: "
     Print #1, "-------------------------------------------------------"
 
     For i = 1 To cantProfe
@@ -8374,10 +8446,10 @@ Sub GuardaTXT(path As String)
     Close
     Open path For Output As #1
     Print #1, "; ------------------------------------------------------------------------------------------"
-    Print #1, ";            �ncora, generaci�n y organizaci�n de horarios Ver 1.2.0"
+    Print #1, ";            �ncora, generaci�n y organizaci�n de horarios Ver 1.2.0"
     Print #1, ";                          Archivo de horarios"
     Print #1, ";"
-    Print #1, ";                    �Cu�ndo se guard� este archivo?"
+    Print #1, ";                    �Cu�ndo se guard� este archivo?"
     Print #1, ";                           Fecha: " & Date
     Print #1, ";                           Hora: " & Time
     Print #1, "; ------------------------------------------------------------------------------------------"
@@ -9467,7 +9539,7 @@ Public Function getIdGenerico(ByVal arreglo As Long, ByVal idx As Long) As Strin
     getIdGenerico = id
 End Function
 
-'Analiza las herencias de restricciones de un objeto o las espec�ficas heredadas de otro,
+'Analiza las herencias de restricciones de un objeto o las espec�ficas heredadas de otro,
 'y devuelve true si esta restringido en un periodo, dia, turno
 'No se analiza la herencia transitiva. Si supone que se simule con la multiherencia no transitiva
 Public Function estaRestringidoPorHerencia(idperiodo As String, dia As Long, turno As Long, tipoA As Long, idA As String, Optional tipoB As Long = 0, Optional idB As String = "", Optional quienHereda As Boolean = True) As Boolean
@@ -9577,7 +9649,7 @@ Public Sub NivelarDistancias(Optional Porciento As Boolean = False)
     ReDim distans(cantLug, cantLug)
     
     For i = 1 To cantLug
-        interface.console.Progress "Preparando la nivelaci�n", i / cantLug * 100
+        interface.console.Progress "Preparando la nivelaci�n", i / cantLug * 100
         For j = 1 To cantLug
             If i <> j Then distans(i, j) = DistanciaEntre(lugar(i).id, lugar(j).id)
         Next
@@ -9617,7 +9689,7 @@ Public Sub NivelarDistancias(Optional Porciento As Boolean = False)
     Next
 
     For i = 1 To cantLug
-        interface.console.Progress "Finalizando la nivelaci�n", i / cantLug * 100
+        interface.console.Progress "Finalizando la nivelaci�n", i / cantLug * 100
         For j = 1 To cantLug
             If i <> j Then
                 If Porciento Then
@@ -9652,7 +9724,7 @@ Public Function getLongArray_BrgOfGrupo(ByVal cla As String, grupo As Long, ByRe
 End Function
 
 ' Dada la matriz de costos, los nodos desde donde se parten, los nodos intermedios y los nodos hasta donde se llegan,
-' se busca el nodo de los nodos intermedios que hace el camino m�nimo entre los nodos desde donde se parten hasta
+' se busca el nodo de los nodos intermedios que hace el camino m�nimo entre los nodos desde donde se parten hasta
 ' donde se llegan pasando por por el.
 Public Function getLugarOptimo(matrix As Variant, cant As Long, antes As Variant, cantAntes As Long, despues As Variant, cantDespues, ahora As Variant, cantAhora As Long) As Long
     Dim sumaAntes As Long, sumaDespues As Long, suma As Long
@@ -10061,8 +10133,8 @@ Public Function getPosiblesInicios(ByVal asg As String, ByVal per As String, ByV
         'si se respeta el orden
             
         If respeta Then
-            'deshabilito  los d�as desde el d�a 1 al d�a de
-            'la actividad anterior m�s pr�xima colocada
+            'deshabilito  los d�as desde el d�a 1 al d�a de
+            'la actividad anterior m�s pr�xima colocada
             Dim key As String
             For i = act - 1 To 1 Step -1
                 key = asg & "_" & per & "_" & i & "_" & bebe
@@ -10076,8 +10148,8 @@ Public Function getPosiblesInicios(ByVal asg As String, ByVal per As String, ByV
                     Exit For
                 End If
             Next
-            'deshabilito los d�as desde el d�a de la actividad siguiente
-            'm�s pr�xima colocada hasta CD
+            'deshabilito los d�as desde el d�a de la actividad siguiente
+            'm�s pr�xima colocada hasta CD
             For i = act + 1 To cantact
                 key = asg & "_" & per & "_" & i & "_" & bebe
                 If Not hashAsignaciones_asig(key) Is Nothing Then
@@ -10092,7 +10164,7 @@ Public Function getPosiblesInicios(ByVal asg As String, ByVal per As String, ByV
             Next
         Else
            ' si no se respeta el orden solo es importante analizar cuando no
-           ' se permiten actividades un mismo d�a y se deshabilitan los d�as
+           ' se permiten actividades un mismo d�a y se deshabilitan los d�as
            ' que ya tiene actividad
            If Not mismodia Then
                 For i = 1 To cantact
@@ -10190,7 +10262,7 @@ End Sub
 
 Public Sub addNivel()
     If cantNiveles > 99 Then
-        interface.MessageDlg "Agregando nivel...", "No se pueden agregar m�s de 100 niveles", vbInformation, "Aceptar"
+        interface.MessageDlg "Agregando nivel...", "No se pueden agregar m�s de 100 niveles", vbInformation, "Aceptar"
         Exit Sub
     End If
     cantNiveles = cantNiveles + 1
