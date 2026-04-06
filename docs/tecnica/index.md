@@ -11,8 +11,8 @@ This follows the **Rational Unified Process (RUP)** methodology for software dev
 ### 1.1 Modelo de Contexto
 - **Purpose**: Identify external actors and system boundaries
 - **Artifacts**:
-  - [Context Model](./01-contexto/contexto.md) - System context and actors
-  - [Use Case Diagram](./01-contexto/use-cases.md) - User interactions ⏳
+  - [Context Model](./01-contexto/contexto.md) - System context and actors 🟢
+  - [Use Case Diagram](./01-contexto/use-cases.md) - User interactions 🟢
 
 ### 1.2 Modelo de Negocio
 - **Purpose**: Business rules and processes
@@ -40,9 +40,8 @@ This follows the **Rational Unified Process (RUP)** methodology for software dev
 ### Views
 | View | Description | Status |
 |------|-------------|--------|
-| [System Architecture](./02-arquitectura/system-architecture.md) | High-level system structure | 🔄 |
-| [Component Architecture](./02-arquitectura/component-diagram.md) | Component relationships | 🔄 |
-| [Package Structure](./02-arquitectura/package-structure.md) | Module organization | 🔄 |
+| [System Architecture](./02-arquitectura/system-architecture.md) | High-level system structure | 🟢 |
+| [Package Structure](./02-arquitectura/package-structure.md) | Module organization | 🟢 |
 
 ---
 
@@ -50,11 +49,11 @@ This follows the **Rational Unified Process (RUP)** methodology for software dev
 
 | Module | Description | Status |
 |--------|-------------|--------|
-| [Data Structures](./03-especificacion/data-structures.md) | UDT definitions | 🔄 |
-| [MPI Algorithm](./03-especificacion/mpi-algorithm.md) | Core scheduling algorithm | 🔄 |
+| [Data Structures](./03-especificacion/data-structures.md) | UDT definitions | 🟢 |
+| [MPI Algorithm](./03-especificacion/mpi-algorithm.md) | Core scheduling algorithm | 🟢 |
 | [LLM Survival Guide](./03-especificacion/llm-survival-guide.md) | AI assistant guide for codebase | 🟢 |
-| [Design Decisions](./03-especificacion/design-decisions.md) | Architecture rationale | 🔄 |
-| [Constants](./03-especificacion/constants.md) | System constants | ⏳ |
+| [Design Decisions](./03-especificacion/design-decisions.md) | Architecture rationale | 🟢 |
+| [Constants](./03-especificacion/constants.md) | System constants | 🟢 |
 | [API Reference](./03-especificacion/api-reference.md) | Public interfaces | ⏳ |
 
 ---
@@ -63,17 +62,18 @@ This follows the **Rational Unified Process (RUP)** methodology for software dev
 
 | Protocol | Description | Status |
 |----------|-------------|--------|
-| [File Format](./04-protocolos/file-format.md) | .anc file specification | 🔄 |
-| [Data Exchange](./04-protocolos/data-exchange.md) | Import/export formats | ⏳ |
+| [File Format](./04-protocolos/file-format.md) | .anc file specification | 🟢 |
+| [VB6 Binary Files](./04-protocolos/vb6-frx-files.md) | .frx and .ctx format | 🟢 |
+| [Data Exchange](./04-protocolos/data-exchange.md) | Import/export formats | 🟢 |
 
 ---
 
 ## 05. Glosario (Glossary)
 
 | Document | Description | Status |
-|----------|-------------|--------|
-| [Terminology](./05-glosario/terminology.md) | Spanish→English reference | 🔄 |
-| [Acronyms](./05-glosario/acronyms.md) | Abbreviation list | ⏳ |
+|----------|-------------|----------|
+| [Terminology](./05-glosario/terminology.md) | Spanish→English reference | 🟢 |
+| [Acronyms](./05-glosario/acronyms.md) | Abbreviation list | 🟢 |
 
 ---
 
@@ -101,9 +101,14 @@ This follows the **Rational Unified Process (RUP)** methodology for software dev
 - [x] System architecture
 - [x] File format spec
 - [x] Glossary
-- [ ] Use case details
+- [x] Use case details
+- [x] Data structures reference
+- [x] Constants reference
+- [x] Package structure
+- [x] Acronyms list
+- [x] Data exchange protocol
 - [ ] Sequence diagrams
-- [ ] Algorithm documentation
+- [ ] Algorithm documentation (in logical model)
 
 ### Iteration 2: Refactoring Planning
 - [ ] Identify rename candidates
@@ -130,4 +135,4 @@ This follows the **Rational Unified Process (RUP)** methodology for software dev
 
 ---
 
-*Last Updated: 2026-04-05*
+*Last Updated: 2026-04-06*
