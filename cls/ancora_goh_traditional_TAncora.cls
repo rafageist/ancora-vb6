@@ -1,74 +1,3 @@
-'===============================================================================
-' clsAncora - Main Data Controller Class
-'===============================================================================
-' PURPOSE:
-'   This is the central controller for all data operations in Áncora.
-'   It manages all entities (periods, specialties, brigades, subjects, professors,
-'   places, resources) and their relationships.
-'
-' ARCHITECTURE:
-'   ┌─────────────────────────────────────────────────────────────────┐
-'   │                         clsAncora                               │
-'   │  (Central data controller - owns all domain entities)         │
-'   ├─────────────────────────────────────────────────────────────────┤
-'   │  Entity Collections:                                            │
-'   │    • periodos (TarrPeriodo) - Time blocks                      │
-'   │    • Especialidad() - Academic programs                       │
-'   │    • Brigadier() - Student groups                              │
-'   │    • asig() - Subjects with activities                        │
-'   │    • clasif() - Activity classifications                      │
-'   │    • profe() - Professors                                     │
-'   │    • lugar() - Classrooms/places                              │
-'   │    • recursos() - Equipment/resources                          │
-'   │    • hrt - Time constraint inheritance system                  │
-'   │                                                              │
-'   │  Assignment Tracking:                                          │
-'   │    • Asignaciones() - Scheduled activities                    │
-'   │    • Imposibles() - Failed assignments                        │
-'   │    • LugXact() - Place assignments per activity               │
-'   │    • ProfeXAct() - Professor assignments per activity         │
-'   │                                                              │
-'   │  Indexing:                                                    │
-'   │    • hashPxAct - Hash index for Professor×Activity            │
-'   │    • hashLxAct - Hash index for Place×Activity                │
-'   │    • hashPer, hashEsp, hashBrg, etc. - Entity hash indexes   │
-'   │                                                              │
-'   │  Metrics:                                                     │
-'   │    • cantEsp, cantBrg, cantAsig, etc. - Entity counts        │
-'   │    • cantAsignaciones - Number of scheduled items             │
-'   │    • cantImposibles - Number of failed items                  │
-'   └─────────────────────────────────────────────────────────────────┘
-'
-' DESIGN DECISIONS:
-'   1. COMPOSITION OVER INHERITANCE
-'      Each entity type has its own array (Especialidad, Brigadier, etc.)
-'      despite sharing common fields (id, descrip) via TRecurso structure.
-'      This allows independent management and different constraints per entity.
-'
-'   2. BIDIRECTIONAL RELATIONSHIPS
-'      Entities reference each other via string IDs (idasig, idprofe, etc.)
-'      The IndexById() function resolves these at runtime.
-'      This provides flexibility for data import/export but requires careful
-'      consistency management.
-'
-'   3. HRT (TIME CONSTRAINT INHERITANCE)
-'      Constraints can be inherited between entity types. For example:
-'      Period → Specialty means "if period X is restricted, specialty Y is too."
-'      This is managed by the TGOH_arrHRT collection.
-'
-'   4. ACTIVITY BREAKDOWN (DESGLOSE)
-'      Each subject (asignatura) has a breakdown of activities per period.
-'      TDesglose contains the list of activities and their properties.
-'      This allows subjects to have different activities in different periods.
-'
-'   5. PRIORITY SYSTEM FOR PLACES (LxAct)
-'      When multiple places are valid for an activity, priority determines
-'      preference. Lower priority number = higher preference.
-'      This allows fine-grained control over place assignment.
-'
-' VERSION: 1.0
-' AUTHOR: [Original Developer]
-'===============================================================================
 VERSION 1.0 CLASS
 BEGIN
   MultiUse = -1  'True
@@ -2575,7 +2504,10 @@ Public Function getAnalisisRecursos() As TAna_arrRecursos
                                         Else
                                             For jj = 1 To grupos.cant
                                                 For kk = 1 To .cantGrupos
-                                                    If grupos.id(jj) = .grupos(kk) Then gruposya(.grupos(kk)) = True
+                                                    If grupos.id(jj) = .grupos(kk) Then
+                                                        Rem gruposya(.grupos(kk)) = True
+                                                        gruposya(jj) = True
+                                                    End If
                                                 Next
                                             Next
                                         End If
@@ -8981,7 +8913,7 @@ Public Sub LeeTXT(path As String)
 
     'Niveles
     
-    cantNiveles = LeeLinea
+    cantNiveles = Val(LeeLinea)
     
     'especialidades
     
