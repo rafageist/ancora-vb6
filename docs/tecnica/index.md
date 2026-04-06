@@ -17,21 +17,21 @@ This follows the **Rational Unified Process (RUP)** methodology for software dev
 ### 1.2 Modelo de Negocio
 - **Purpose**: Business rules and processes
 - **Artifacts**:
-  - [Business Model](./02-negocio/negocio.md) - Business concepts and rules
-  - [Process Flows](./02-negocio/processes.md) - Workflow diagrams ⏳
+  - [Business Model](./01-modelado/02-negocio/negocio.md) - Business concepts and rules 🟢
+  - [Process Flows](./01-modelado/02-negocio/processes.md) - Workflow diagrams 🟢
 
 ### 1.3 Modelo Lógico
 - **Purpose**: Technical architecture without implementation details
 - **Artifacts**:
-  - [Logical Model](./03-logico/logico.md) - Class diagrams and packages
-  - [Sequence Diagrams](./03-logico/sequences.md) - Interaction patterns ⏳
-  - [Algorithm Documentation](./03-logico/algorithms.md) - MPI algorithm ⏳
+  - [Logical Model](./01-modelado/03-logico/logico.md) - Class diagrams and packages 🟢
+  - [Sequence Diagrams](./01-modelado/03-logico/sequences.md) - Interaction patterns 🟢
+  - [Algorithm Documentation](./01-modelado/03-logico/algorithms.md) - Algorithm overview 🟢
 
 ### 1.4 Modelo Físico
 - **Purpose**: Implementation-ready architecture
 - **Artifacts**:
-  - [Physical Model](./04-fisico/fisico.md) - File structure and deployment
-  - [Component Diagram](./04-fisico/components.md) - Component relationships ⏳
+  - [Physical Model](./01-modelado/04-fisico/fisico.md) - File structure and deployment 🟢
+  - [Component Diagram](./01-modelado/04-fisico/components.md) - Component relationships 🟢
 
 ---
 
@@ -54,7 +54,7 @@ This follows the **Rational Unified Process (RUP)** methodology for software dev
 | [LLM Survival Guide](./03-especificacion/llm-survival-guide.md) | AI assistant guide for codebase | 🟢 |
 | [Design Decisions](./03-especificacion/design-decisions.md) | Architecture rationale | 🟢 |
 | [Constants](./03-especificacion/constants.md) | System constants | 🟢 |
-| [API Reference](./03-especificacion/api-reference.md) | Public interfaces | ⏳ |
+| [API Reference](./03-especificacion/api-reference.md) | Public interfaces | 🟢 |
 
 ---
 
@@ -85,7 +85,7 @@ This follows the **Rational Unified Process (RUP)** methodology for software dev
 | **Requirements** | 01-Contexto (Use Cases) |
 | **Analysis & Design** | 01-Lógico, 02-Arquitectura |
 | **Implementation** | 01-Físico (File Structure) |
-| **Testing** | Not yet documented ⏳ |
+| **Testing** | [Testing Strategy](./06-testing/testing-strategy.md) | 🟢 |
 | **Deployment** | 01-Físico (Deployment) |
 
 ---
@@ -107,8 +107,11 @@ This follows the **Rational Unified Process (RUP)** methodology for software dev
 - [x] Package structure
 - [x] Acronyms list
 - [x] Data exchange protocol
-- [ ] Sequence diagrams
-- [ ] Algorithm documentation (in logical model)
+- [x] Sequence diagrams
+- [x] Algorithm documentation (overview)
+- [x] Component diagram
+- [x] API reference
+- [x] Testing strategy
 
 ### Iteration 2: Refactoring Planning
 - [ ] Identify rename candidates
